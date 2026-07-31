@@ -3,38 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhimeshwor Diagnostic Support Pvt. Ltd. | Kupondole-1, Lalitpur</title>
+    <title>Bhimeshwori Diagnostic Support Pvt. Ltd.</title>
     
-    <!-- ==========================================
-         REPLACE FAVICON / BROWSER TAB ICON HERE 
-         ========================================== -->
-    <link rel="icon" type="image/png" href="https://via.placeholder.com/32x32.png?text=BDS">
-
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    fontFamily: { 
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'] 
+                    },
                     colors: {
                         brand: {
-                            navy: '#0F2027',
-                            slate: '#1E293B',
-                            green: '#2E7D32',
-                            lightGreen: '#4CAF50',
-                            teal: '#0D9488',
-                            bg: '#F8FAFC',
-                            border: '#E2E8F0'
+                            green: '#2e7d32',
+                            teal: '#00838f',
+                            dark: '#0f291e',
+                            light: '#f1f8e9',
+                            accent: '#ffb300'
                         }
                     }
                 }
@@ -42,333 +37,300 @@
         }
     </script>
 </head>
-<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-emerald-600 selection:text-white pb-16 sm:pb-0">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-emerald-100 selection:text-emerald-900">
 
-    <!-- TOP INFORMATIONAL BAR -->
-    <div class="bg-brand-navy text-slate-300 text-xs py-2.5 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
-            <div class="flex flex-wrap justify-center md:justify-start items-center gap-4 sm:gap-6">
-                <span><i class="fa-solid fa-location-dot text-brand-lightGreen mr-1.5"></i> Kupondole-1, Lalitpur, Nepal</span>
-                <span><i class="fa-solid fa-user text-brand-lightGreen mr-1.5"></i> Jitendra Das Kayastha</span>
+    <!-- Top Info Bar -->
+    <div class="bg-[#0f291e] text-emerald-100/90 text-xs py-2.5 border-b border-emerald-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
+            <div class="flex items-center gap-6">
+                <span><i class="fa-solid fa-location-dot text-emerald-400 mr-2"></i>Kupondole-1, Lalitpur, Nepal</span>
+                <span class="hidden sm:inline"><i class="fa-solid fa-user-tie text-emerald-400 mr-2"></i>Jitendra Das Kayastha</span>
             </div>
-            <div class="flex flex-wrap justify-center md:justify-end items-center gap-4">
-                <a href="tel:015900069" class="hover:text-white transition"><i class="fa-solid fa-phone text-brand-lightGreen mr-1.5"></i> 01-5900069</a>
-                <a href="mailto:bhimeshwor2010@gmail.com" class="hover:text-white transition"><i class="fa-solid fa-envelope text-brand-lightGreen mr-1.5"></i> bhimeshwor2010@gmail.com</a>
+            <div class="flex items-center gap-6 font-medium">
+                <a href="tel:015900069" class="hover:text-emerald-300 transition-colors"><i class="fa-solid fa-phone text-emerald-400 mr-2"></i>01-5900069</a>
+                <a href="mailto:bhimeshwor2010@gmail.com" class="hover:text-emerald-300 transition-colors"><i class="fa-solid fa-envelope text-emerald-400 mr-2"></i>bhimeshwor2010@gmail.com</a>
             </div>
         </div>
     </div>
 
-    <!-- NAVIGATION HEADER -->
-    <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             
-            <!-- Brand Identity Header -->
-            <a href="#" class="flex items-center gap-3">
-                <!-- =================================================================
-                     REPLACE HEADER LOGO HERE
-                     ================================================================= -->
-                <div class="w-12 h-12 flex items-center justify-center shrink-0">
-                    <img src="https://via.placeholder.com/150x150.png?text=BDS+Logo" 
-                         alt="Bhimeshwor Diagnostic Support Logo" 
-                         class="w-full h-full object-contain">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="flex items-center gap-2">
+                    <img src="images/logo.png" alt="Bhimeshwori Diagnostic Support Pvt. Ltd. logo" class="w-10 h-10 object-contain rounded-xl shadow-sm border border-slate-200 bg-white" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                    <div class="hidden relative w-10 h-10 flex items-center justify-center bg-gradient-to-tr from-green-600 via-teal-600 to-amber-500 rounded-xl shadow-sm text-white font-black text-lg">
+                        <i class="fa-solid fa-handshake-angle text-white"></i>
+                    </div>
                 </div>
-
-                <div class="flex flex-col">
-                    <span class="font-extrabold text-lg sm:text-xl text-brand-navy tracking-tight leading-none">BDS Nepal</span>
-                    <span class="text-[10px] sm:text-[11px] font-medium text-slate-500 mt-0.5">Bhimeshwor Diagnostic Support Pvt. Ltd.</span>
+                <div>
+                    <span class="font-extrabold text-sm sm:text-base text-slate-900 block leading-tight tracking-tight">BHIMESHWORI</span>
+                    <span class="text-[9px] font-bold text-teal-700 tracking-wider uppercase block">Diagnostic Support Pvt. Ltd.</span>
                 </div>
             </a>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-slate-600">
-                <a href="#about" class="hover:text-brand-green transition">About</a>
-                <a href="#products" class="hover:text-brand-green transition">Products & Equipments</a>
-                <a href="#services" class="hover:text-brand-green transition">Technical Services</a>
-                <a href="#location" class="hover:text-brand-green transition">Location & Map</a>
-                <a href="#contact" class="hover:text-brand-green transition">Contact</a>
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-600">
+                <a href="#about" class="hover:text-emerald-700 transition-colors">About</a>
+                <a href="#products" class="hover:text-emerald-700 transition-colors">Products</a>
+                <a href="#strengths" class="hover:text-emerald-700 transition-colors">Quality Assurance</a>
+                <a href="#location" class="hover:text-emerald-700 transition-colors">Location</a>
+                <a href="#contact" class="hover:text-emerald-700 transition-colors">Contact</a>
             </nav>
 
-            <!-- WhatsApp Action Button -->
-            <a href="https://wa.me/9779841914333" target="_blank" rel="noopener noreferrer" 
-               class="inline-flex items-center gap-2 bg-brand-green hover:bg-emerald-800 text-white font-semibold px-4 sm:px-5 py-2.5 rounded-lg text-xs sm:text-sm shadow-sm transition">
-                <i class="fa-brands fa-whatsapp text-base"></i>
-                <span class="hidden sm:inline">WhatsApp Contact</span>
-                <span class="sm:hidden">Chat</span>
-            </a>
+            <div class="flex items-center gap-3">
+                <button onclick="openModal()" class="hidden sm:inline-flex bg-[#0f291e] hover:bg-emerald-900 text-white font-semibold px-4 py-2.5 rounded-xl text-xs transition-all shadow-sm">
+                    Request Quote
+                </button>
+                <a href="https://wa.me/9779841914333" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 py-2.5 rounded-xl text-xs transition-all shadow-sm flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span class="hidden sm:inline">WhatsApp</span>
+                </a>
+                <button onclick="toggleMobileMenu()" class="md:hidden text-slate-700 p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-3">
+            <a href="#about" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-700 hover:text-emerald-700">About</a>
+            <a href="#products" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-700 hover:text-emerald-700">Products</a>
+            <a href="#strengths" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-700 hover:text-emerald-700">Quality Assurance</a>
+            <a href="#location" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-700 hover:text-emerald-700">Location</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-700 hover:text-emerald-700">Contact</a>
+            <button onclick="openModal(); toggleMobileMenu();" class="w-full bg-[#0f291e] text-white text-xs font-semibold py-2.5 rounded-xl">Request Quote</button>
         </div>
     </header>
 
     <main>
-
-        <!-- HERO SECTION -->
-        <section id="about" class="bg-white py-12 lg:py-20 border-b border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-brand-green text-xs font-semibold">
-                        <i class="fa-solid fa-building-circle-check"></i> Registered Medical & Laboratory Goods Supplier
+        <!-- Hero Section -->
+        <section id="about" class="relative bg-gradient-to-br from-[#0f291e] via-[#133526] to-[#0a1c14] text-white py-16 lg:py-24 overflow-hidden border-b border-emerald-900/50">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#34d399_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-900/60 border border-emerald-700/50 text-emerald-300 text-xs font-bold tracking-wide uppercase shadow-inner">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Certified Medical & Laboratory Partner
                     </div>
-
-                    <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-brand-navy tracking-tight leading-tight">
-                        Bhimeshwor Diagnostic Support Pvt. Ltd.
+                    
+                    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                        Precision Diagnostics & <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">Advanced Medical Support</span>
                     </h1>
 
-                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                        All kinds of laboratory equipment, rapid test kits, reagents/kits, chemicals, surgical goods, X-ray machines, ventilators, C-arms, hospital goods, accessories, technical services, and support.
+                    <p class="text-emerald-100/80 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+                        Trusted suppliers of high-performance laboratory instruments, rapid test kits, specialized reagents, surgical apparatus, and critical care solutions across Nepal.
                     </p>
 
-                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="#products" class="w-full sm:w-auto bg-brand-navy hover:bg-slate-800 text-white font-semibold px-6 py-3 rounded-lg text-sm transition shadow-sm text-center">
-                            Browse Supplies
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#products" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3.5 rounded-xl text-xs transition-all shadow-md hover:shadow-emerald-900/50 flex items-center gap-2">
+                            Explore Catalog <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </a>
-                        <a href="https://wa.me/9779841914333?text=Hello%20Jitendra%20Sir,%20I%20would%20like%20to%20inquire%20about%20medical%20equipment." 
-                           target="_blank" rel="noopener noreferrer" 
-                           class="w-full sm:w-auto bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold px-6 py-3 rounded-lg text-sm transition shadow-sm flex items-center justify-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-brand-green"></i> Contact Representative
-                        </a>
+                        <button onclick="openModal()" class="bg-emerald-950/80 border border-emerald-700/60 hover:bg-emerald-900 text-emerald-100 font-semibold px-6 py-3.5 rounded-xl text-xs transition-all flex items-center gap-2.5 shadow-sm">
+                            <i class="fa-solid fa-file-invoice text-emerald-400"></i> Get Official Quote
+                        </button>
                     </div>
 
-                    <!-- Direct Contact Badge -->
-                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center font-bold text-lg shrink-0">
-                                <i class="fa-solid fa-user-tie"></i>
+                    <div class="p-4 bg-emerald-950/60 backdrop-blur-md rounded-2xl border border-emerald-800/60 flex items-center justify-between gap-4 max-w-md shadow-sm">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-800/40 text-emerald-300 border border-emerald-700/40 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-user-check"></i>
                             </div>
-                            <div class="text-left">
-                                <p class="text-xs text-slate-500 font-medium">Contact Person</p>
-                                <p class="text-sm font-bold text-slate-800">Jitendra Das Kayastha</p>
+                            <div>
+                                <p class="text-[10px] font-bold text-emerald-400/80 uppercase tracking-wider">Authorized Representative</p>
+                                <p class="text-xs font-bold text-white">Jitendra Das Kayastha</p>
                             </div>
                         </div>
-                        <a href="tel:9841914333" class="w-full sm:w-auto text-center bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 px-4 py-2 rounded-lg text-xs font-bold text-brand-green transition flex items-center justify-center gap-1.5">
-                            <i class="fa-solid fa-phone"></i> +977 9841914333
+                        <a href="tel:9841914333" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors whitespace-nowrap">
+                            +977 9841914333 <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i>
                         </a>
                     </div>
-
                 </div>
 
-                <!-- Hero Banner Image -->
                 <div class="lg:col-span-5">
-                    <div class="bg-slate-100 p-2 sm:p-3 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-                        <div class="relative overflow-hidden rounded-xl h-64 sm:h-80 bg-slate-200">
-                            <!-- =================================================================
-                                 REPLACE HERO MAIN IMAGE HERE
-                                 ================================================================= -->
-                            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1000&q=80" 
-                                 alt="Laboratory diagnostic equipment" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-3 bg-white rounded-lg border border-slate-100 text-left">
-                            <p class="text-xs font-bold text-slate-800">Bhimeshwor Diagnostic Support Pvt. Ltd.</p>
-                            <p class="text-xs text-slate-500"><i class="fa-solid fa-location-dot text-brand-green mr-1"></i> Kupondole-1, Lalitpur, Nepal</p>
+                    <div class="rounded-3xl p-3 bg-gradient-to-br from-emerald-900/40 to-teal-900/20 border border-emerald-700/30 shadow-2xl backdrop-blur-sm relative group">
+                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80" alt="Advanced Diagnostic Equipment" class="w-full h-80 object-cover rounded-2xl shadow-inner group-hover:scale-[1.01] transition-transform duration-500">
+                        <div class="absolute bottom-6 left-6 right-6 bg-slate-900/90 backdrop-blur-md p-3.5 rounded-xl border border-slate-700 flex items-center justify-between text-xs text-white">
+                            <span class="font-semibold"><i class="fa-solid fa-shield-halved text-emerald-400 mr-2"></i> ISO & CE Certified Supply Chain</span>
+                            <span class="text-emerald-400 font-bold">100% Assured</span>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- PRODUCT & SERVICES CATALOG -->
-        <section id="products" class="py-16 lg:py-24 bg-brand-bg">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-12">
-                
-                <div class="max-w-2xl text-center lg:text-left">
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy tracking-tight">Supplies & Equipment Scope</h2>
-                    <p class="text-slate-600 text-sm mt-2">Supplying diagnostic laboratories, surgical theaters, and hospital facilities across Nepal.</p>
+        <!-- Metric Highlight Bar -->
+        <section class="bg-emerald-900 text-white py-8 border-b border-emerald-800 shadow-inner">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div class="p-2">
+                    <p class="text-2xl lg:text-3xl font-extrabold text-emerald-300">15+</p>
+                    <p class="text-[11px] uppercase font-semibold text-emerald-100/80 tracking-wider mt-1">Years of Excellence</p>
+                </div>
+                <div class="p-2">
+                    <p class="text-2xl lg:text-3xl font-extrabold text-emerald-300">500+</p>
+                    <p class="text-[11px] uppercase font-semibold text-emerald-100/80 tracking-wider mt-1">Hospitals & Laboratories</p>
+                </div>
+                <div class="p-2">
+                    <p class="text-2xl lg:text-3xl font-extrabold text-emerald-300">100%</p>
+                    <p class="text-[11px] uppercase font-semibold text-emerald-100/80 tracking-wider mt-1">Cold-Chain Integrity</p>
+                </div>
+                <div class="p-2">
+                    <p class="text-2xl lg:text-3xl font-extrabold text-emerald-300">24/7</p>
+                    <p class="text-[11px] uppercase font-semibold text-emerald-100/80 tracking-wider mt-1">On-Site Calibration Support</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Operational Strengths Infographic Section (Matching exact visual reference with badge icon for Quality Assured) -->
+        <section id="strengths" class="py-20 bg-gradient-to-b from-white to-slate-50 border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <div class="text-center max-w-2xl mx-auto space-y-3">
+                    <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-100/80 px-3.5 py-1.5 rounded-full border border-emerald-200 shadow-xs">Our Core Operational Focus</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Excellence in Medical Logistics & Support</h2>
+                    <p class="text-sm text-slate-600">Engineered workflow designed specifically to fulfill stringent hospital and pathology requirements.</p>
                 </div>
 
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Process Flow Infographic Grid matching image_16863f.png precisely -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
                     
-                    <!-- Item 1: Laboratory Equipments -->
-                    <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm flex flex-col group hover:border-brand-green transition duration-300">
-                        <div class="h-52 bg-slate-200 relative overflow-hidden">
-                            <!-- ==========================================
-                                 REPLACE IMAGE 1: LAB EQUIPMENT (UPDATED)
-                                 ========================================== -->
-                            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80" 
-                                 alt="Laboratory equipment microscope setup" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-
-                            <!-- HOVER OVERLAY DESCRIPTION -->
-                            <div class="absolute inset-0 bg-brand-navy/90 text-white p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center">
-                                <span class="text-xs font-bold text-brand-lightGreen uppercase tracking-wider mb-2">
-                                    <i class="fa-solid fa-microscope mr-1"></i> Overview & Details
-                                </span>
-                                <p class="text-xs leading-relaxed text-slate-200">
-                                    Includes clinical centrifuges, binocular microscopes, incubators, automated hematology analyzers, and precision water baths for path labs.
-                                </p>
-                            </div>
+                    <!-- Step 1: Quality Assured (Matching Image Design: Green badge, Light green soft card icon container with check-shield or award icon) -->
+                    <div class="bg-white p-7 rounded-2xl border border-emerald-100 shadow-sm hover:shadow-lg hover:border-emerald-300 transition-all relative flex flex-col items-center text-center group">
+                        <div class="absolute -top-4 w-9 h-9 rounded-xl bg-[#00a86b] text-white font-bold text-xs flex items-center justify-center shadow-md">01</div>
+                        <div class="w-16 h-16 bg-[#e8f8f0] text-[#00a86b] rounded-2xl flex items-center justify-center text-2xl mb-5 mt-2 group-hover:scale-110 group-hover:bg-[#00a86b] group-hover:text-white transition-all duration-300 border border-emerald-100 shadow-xs">
+                            <i class="fa-solid fa-award"></i>
                         </div>
+                        <h3 class="font-bold text-base text-slate-900 mb-2">Quality Assured</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Sourced directly from recognized manufacturers.</p>
+                    </div>
 
-                        <div class="p-5 sm:p-6 flex flex-col flex-grow">
-                            <h3 class="text-lg font-bold text-brand-navy mb-2">Laboratory Equipments</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-6 flex-grow">
-                                All kinds of laboratory equipment for clinical diagnostic facilities, research centers, and path labs.
-                            </p>
-                            <a href="https://wa.me/9779841914333?text=Inquiry%20about%20Laboratory%20Equipments" target="_blank" rel="noopener noreferrer" 
-                               class="w-full bg-slate-100 group-hover:bg-brand-green group-hover:text-white text-slate-800 font-semibold py-2.5 rounded-lg text-xs transition text-center flex items-center justify-center gap-2">
-                                <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Inquiry
-                            </a>
+                    <!-- Step 2: Cold-Chain Handling -->
+                    <div class="bg-white p-7 rounded-2xl border border-teal-100 shadow-sm hover:shadow-lg hover:border-teal-300 transition-all relative flex flex-col items-center text-center group">
+                        <div class="absolute -top-4 w-9 h-9 rounded-xl bg-[#008b8b] text-white font-bold text-xs flex items-center justify-center shadow-md">02</div>
+                        <div class="w-16 h-16 bg-[#e6f4f4] text-[#008b8b] rounded-2xl flex items-center justify-center text-2xl mb-5 mt-2 group-hover:scale-110 group-hover:bg-[#008b8b] group-hover:text-white transition-all duration-300 border border-teal-100 shadow-xs">
+                            <i class="fa-solid fa-snowflake"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-slate-900 mb-2">Cold-Chain Handling</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Regulated reagent delivery & cold storage control.</p>
+                    </div>
+
+                    <!-- Step 3: Maintenance Support -->
+                    <div class="bg-white p-7 rounded-2xl border border-cyan-100 shadow-sm hover:shadow-lg hover:border-cyan-300 transition-all relative flex flex-col items-center text-center group">
+                        <div class="absolute -top-4 w-9 h-9 rounded-xl bg-[#2563eb] text-white font-bold text-xs flex items-center justify-center shadow-md">03</div>
+                        <div class="w-16 h-16 bg-[#eff6ff] text-[#2563eb] rounded-2xl flex items-center justify-center text-2xl mb-5 mt-2 group-hover:scale-110 group-hover:bg-[#2563eb] group-hover:text-white transition-all duration-300 border border-cyan-100 shadow-xs">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-slate-900 mb-2">Maintenance Support</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">On-site setup and technical calibration assistance.</p>
+                    </div>
+
+                    <!-- Step 4: Bulk Orders -->
+                    <div class="bg-white p-7 rounded-2xl border border-amber-100 shadow-sm hover:shadow-lg hover:border-amber-300 transition-all relative flex flex-col items-center text-center group">
+                        <div class="absolute -top-4 w-9 h-9 rounded-xl bg-[#f97316] text-white font-bold text-xs flex items-center justify-center shadow-md">04</div>
+                        <div class="w-16 h-16 bg-[#fffbeb] text-[#f97316] rounded-2xl flex items-center justify-center text-2xl mb-5 mt-2 group-hover:scale-110 group-hover:bg-[#f97316] group-hover:text-white transition-all duration-300 border border-amber-100 shadow-xs">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-slate-900 mb-2">Bulk Orders</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Custom supply solutions for hospitals & labs.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Catalog Section -->
+        <section id="products" class="py-16 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div>
+                        <h2 class="text-xs font-bold text-emerald-700 uppercase tracking-widest">Medical Supplies Catalog</h2>
+                        <p class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-1">Equipment & Diagnostic Supplies</p>
+                    </div>
+
+                    <!-- Category Filter Buttons -->
+                    <div class="flex flex-wrap gap-2 bg-slate-200/80 p-1.5 rounded-xl border border-slate-300 text-xs font-semibold">
+                        <button onclick="filterProducts('all')" class="filter-btn active-tab px-4 py-2 rounded-lg bg-[#0f291e] text-white transition-all shadow-xs" data-category="all">All Items</button>
+                        <button onclick="filterProducts('lab')" class="filter-btn px-4 py-2 rounded-lg text-slate-700 hover:bg-white hover:text-slate-900 transition-all" data-category="lab">Lab Equipment</button>
+                        <button onclick="filterProducts('reagents')" class="filter-btn px-4 py-2 rounded-lg text-slate-700 hover:bg-white hover:text-slate-900 transition-all" data-category="reagents">Kits & Reagents</button>
+                        <button onclick="filterProducts('imaging')" class="filter-btn px-4 py-2 rounded-lg text-slate-700 hover:bg-white hover:text-slate-900 transition-all" data-category="imaging">ICU & Imaging</button>
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Card 1 -->
+                    <div class="product-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:border-emerald-500 hover:shadow-md transition-all flex flex-col group" data-category="lab">
+                        <div class="h-48 relative overflow-hidden bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80" alt="Lab Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-emerald-950/90 backdrop-blur-md text-emerald-200 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-emerald-800">Hardware</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-bold text-base text-slate-900 mb-1">Laboratory Equipment</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-6 flex-grow">Centrifuges, binocular microscopes, incubators, automated hematology analyzers, and water baths.</p>
+                            <button onclick="openModal('Laboratory Equipment')" class="w-full bg-emerald-50 border border-emerald-200 hover:bg-[#0f291e] hover:text-white text-emerald-800 font-semibold py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-file-signature text-emerald-600 group-hover:text-white"></i> Request Quote
+                            </button>
                         </div>
                     </div>
 
-                    <!-- Item 2: Rapid Tests, Reagents & Chemicals -->
-                    <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm flex flex-col group hover:border-brand-green transition duration-300">
-                        <div class="h-52 bg-slate-200 relative overflow-hidden">
-                            <!-- ==========================================
-                                 REPLACE IMAGE 2: REAGENTS & KITS
-                                 ========================================== -->
-                            <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=800&q=80" 
-                                 alt="Rapid test kits and diagnostic reagents" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-
-                            <!-- HOVER OVERLAY DESCRIPTION -->
-                            <div class="absolute inset-0 bg-brand-navy/90 text-white p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center">
-                                <span class="text-xs font-bold text-brand-lightGreen uppercase tracking-wider mb-2">
-                                    <i class="fa-solid fa-vial mr-1"></i> Overview & Details
-                                </span>
-                                <p class="text-xs leading-relaxed text-slate-200">
-                                    Rapid diagnostic cassettes (Dengue, Typhoid, HBV, HIV, Pregnancy), biochemistry reagents, staining solutions, and diagnostic chemicals.
-                                </p>
-                            </div>
+                    <!-- Card 2 -->
+                    <div class="product-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:border-emerald-500 hover:shadow-md transition-all flex flex-col group" data-category="reagents">
+                        <div class="h-48 relative overflow-hidden bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=800&q=80" alt="Reagents" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-emerald-950/90 backdrop-blur-md text-emerald-200 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-emerald-800">Consumables</span>
                         </div>
-
-                        <div class="p-5 sm:p-6 flex flex-col flex-grow">
-                            <h3 class="text-lg font-bold text-brand-navy mb-2">Rapid Tests, Reagents & Chemicals</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-6 flex-grow">
-                                Rapid diagnostic test kits, diagnostic reagents/kits, and chemical solutions for clinical testing.
-                            </p>
-                            <a href="https://wa.me/9779841914333?text=Inquiry%20about%20Rapid%20Tests%20Reagents%20and%20Chemicals" target="_blank" rel="noopener noreferrer" 
-                               class="w-full bg-slate-100 group-hover:bg-brand-green group-hover:text-white text-slate-800 font-semibold py-2.5 rounded-lg text-xs transition text-center flex items-center justify-center gap-2">
-                                <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Inquiry
-                            </a>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-bold text-base text-slate-900 mb-1">Rapid Tests & Reagents</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-6 flex-grow">Rapid test cassettes (Dengue, Typhoid, HBV, HIV), biochemistry reagents, and staining chemicals under cold chain.</p>
+                            <button onclick="openModal('Rapid Tests & Reagents')" class="w-full bg-emerald-50 border border-emerald-200 hover:bg-[#0f291e] hover:text-white text-emerald-800 font-semibold py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-file-signature text-emerald-600 group-hover:text-white"></i> Request Quote
+                            </button>
                         </div>
                     </div>
 
-                    <!-- Item 3: Surgical Goods & Accessories -->
-                    <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm flex flex-col group hover:border-brand-green transition duration-300">
-                        <div class="h-52 bg-slate-200 relative overflow-hidden">
-                            <!-- ==========================================
-                                 REPLACE IMAGE 3: SURGICAL GOODS
-                                 ========================================== -->
-                            <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80" 
-                                 alt="Surgical instruments" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-
-                            <!-- HOVER OVERLAY DESCRIPTION -->
-                            <div class="absolute inset-0 bg-brand-navy/90 text-white p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center">
-                                <span class="text-xs font-bold text-brand-lightGreen uppercase tracking-wider mb-2">
-                                    <i class="fa-solid fa-scalpel mr-1"></i> Overview & Details
-                                </span>
-                                <p class="text-xs leading-relaxed text-slate-200">
-                                    High-grade stainless steel OT instruments, forceps, scissors, scalpels, sterile sutures, gloves, and surgical drapes.
-                                </p>
-                            </div>
+                    <!-- Card 3 -->
+                    <div class="product-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:border-emerald-500 hover:shadow-md transition-all flex flex-col group" data-category="lab">
+                        <div class="h-48 relative overflow-hidden bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80" alt="Surgical Tools" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-emerald-950/90 backdrop-blur-md text-emerald-200 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-emerald-800">Surgical</span>
                         </div>
-
-                        <div class="p-5 sm:p-6 flex flex-col flex-grow">
-                            <h3 class="text-lg font-bold text-brand-navy mb-2">Surgical Goods & Accessories</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-6 flex-grow">
-                                Surgical tools, operating instruments, hospital goods, and related operational accessories.
-                            </p>
-                            <a href="https://wa.me/9779841914333?text=Inquiry%20about%20Surgical%20Goods" target="_blank" rel="noopener noreferrer" 
-                               class="w-full bg-slate-100 group-hover:bg-brand-green group-hover:text-white text-slate-800 font-semibold py-2.5 rounded-lg text-xs transition text-center flex items-center justify-center gap-2">
-                                <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Inquiry
-                            </a>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-bold text-base text-slate-900 mb-1">Surgical Goods & Tools</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-6 flex-grow">Stainless steel OT instruments, forcep sets, scalpels, sterile sutures, and examination gloves.</p>
+                            <button onclick="openModal('Surgical Goods')" class="w-full bg-emerald-50 border border-emerald-200 hover:bg-[#0f291e] hover:text-white text-emerald-800 font-semibold py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-file-signature text-emerald-600 group-hover:text-white"></i> Request Quote
+                            </button>
                         </div>
                     </div>
 
-                    <!-- Item 4: X-Ray, Ventilator & C-Arm -->
-                    <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm flex flex-col group hover:border-brand-green transition duration-300">
-                        <div class="h-52 bg-slate-200 relative overflow-hidden">
-                            <!-- ==========================================
-                                 REPLACE IMAGE 4: X-RAY & VENTILATORS
-                                 ========================================== -->
-                            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80" 
-                                 alt="Medical imaging and radiography equipment" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-
-                            <!-- HOVER OVERLAY DESCRIPTION -->
-                            <div class="absolute inset-0 bg-brand-navy/90 text-white p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center">
-                                <span class="text-xs font-bold text-brand-lightGreen uppercase tracking-wider mb-2">
-                                    <i class="fa-solid fa-x-ray mr-1"></i> Overview & Details
-                                </span>
-                                <p class="text-xs leading-relaxed text-slate-200">
-                                    Digital X-ray units, mobile C-arm fluoroscopy systems, ICU ventilators, lead aprons, cassette plates, and radiograph accessories.
-                                </p>
-                            </div>
+                    <!-- Card 4 -->
+                    <div class="product-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:border-emerald-500 hover:shadow-md transition-all flex flex-col group" data-category="imaging">
+                        <div class="h-48 relative overflow-hidden bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80" alt="X-Ray & Ventilator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-emerald-950/90 backdrop-blur-md text-emerald-200 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-emerald-800">Imaging</span>
                         </div>
-
-                        <div class="p-5 sm:p-6 flex flex-col flex-grow">
-                            <h3 class="text-lg font-bold text-brand-navy mb-2">X-Ray, Ventilator & C-Arm</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-6 flex-grow">
-                                X-ray machinery, ventilator units, C-arm imaging systems, and clinical medical hardware.
-                            </p>
-                            <a href="https://wa.me/9779841914333?text=Inquiry%20about%20X-Ray%20Ventilator%20and%20C-Arm" target="_blank" rel="noopener noreferrer" 
-                               class="w-full bg-slate-100 group-hover:bg-brand-green group-hover:text-white text-slate-800 font-semibold py-2.5 rounded-lg text-xs transition text-center flex items-center justify-center gap-2">
-                                <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Inquiry
-                            </a>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-bold text-base text-slate-900 mb-1">X-Ray, Ventilator & C-Arm</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-6 flex-grow">Digital X-ray units, mobile C-arms, ICU ventilators, lead protective aprons, and radiograph plates.</p>
+                            <button onclick="openModal('X-Ray & Ventilators')" class="w-full bg-emerald-50 border border-emerald-200 hover:bg-[#0f291e] hover:text-white text-emerald-800 font-semibold py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-file-signature text-emerald-600 group-hover:text-white"></i> Request Quote
+                            </button>
                         </div>
                     </div>
 
-                    <!-- Item 5: Hospital Goods & Accessories -->
-                    <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm flex flex-col group hover:border-brand-green transition duration-300">
-                        <div class="h-52 bg-slate-200 relative overflow-hidden">
-                            <!-- ==========================================
-                                 REPLACE IMAGE 5: HOSPITAL GOODS
-                                 ========================================== -->
-                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" 
-                                 alt="Hospital supplies and consumables" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-
-                            <!-- HOVER OVERLAY DESCRIPTION -->
-                            <div class="absolute inset-0 bg-brand-navy/90 text-white p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center">
-                                <span class="text-xs font-bold text-brand-lightGreen uppercase tracking-wider mb-2">
-                                    <i class="fa-solid fa-hospital-user mr-1"></i> Overview & Details
-                                </span>
-                                <p class="text-xs leading-relaxed text-slate-200">
-                                    Patient monitors, IV stands, hospital bed accessories, suction units, oxygen flowmeters, and clinical furniture essentials.
-                                </p>
-                            </div>
+                    <!-- Card 5 -->
+                    <div class="product-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:border-emerald-500 hover:shadow-md transition-all flex flex-col group" data-category="imaging">
+                        <div class="h-48 relative overflow-hidden bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="Hospital Supplies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-emerald-950/90 backdrop-blur-md text-emerald-200 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-emerald-800">ICU & Ward</span>
                         </div>
-
-                        <div class="p-5 sm:p-6 flex flex-col flex-grow">
-                            <h3 class="text-lg font-bold text-brand-navy mb-2">Hospital Goods & Supplies</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-6 flex-grow">
-                                Complete range of hospital supplies, general health center goods, and equipment accessories.
-                            </p>
-                            <a href="https://wa.me/9779841914333?text=Inquiry%20about%20Hospital%20Goods" target="_blank" rel="noopener noreferrer" 
-                               class="w-full bg-slate-100 group-hover:bg-brand-green group-hover:text-white text-slate-800 font-semibold py-2.5 rounded-lg text-xs transition text-center flex items-center justify-center gap-2">
-                                <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Inquiry
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Item 6: Technical Services & Support -->
-                    <div id="services" class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm flex flex-col group hover:border-brand-green transition duration-300">
-                        <div class="h-52 bg-slate-900 flex flex-col items-center justify-center text-white p-6 text-center relative overflow-hidden">
-                            <i class="fa-solid fa-screwdriver-wrench text-4xl text-brand-lightGreen mb-2 transition-transform duration-500 group-hover:scale-110"></i>
-                            <span class="font-bold text-sm tracking-wide">TECHNICAL SERVICES</span>
-
-                            <!-- HOVER OVERLAY DESCRIPTION -->
-                            <div class="absolute inset-0 bg-brand-navy/95 text-white p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center">
-                                <span class="text-xs font-bold text-brand-lightGreen uppercase tracking-wider mb-2">
-                                    <i class="fa-solid fa-gears mr-1"></i> Technical Assistance
-                                </span>
-                                <p class="text-xs leading-relaxed text-slate-200">
-                                    On-site instrument setup, preventive maintenance, calibration services, and spare parts supply across Lalitpur and nationwide.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="p-5 sm:p-6 flex flex-col flex-grow">
-                            <h3 class="text-lg font-bold text-brand-navy mb-2">Technical Services & Support</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-6 flex-grow">
-                                Technical support, device assistance, and equipment maintenance for medical instruments.
-                            </p>
-                            <a href="https://wa.me/9779841914333?text=Inquiry%20about%20Technical%20Services%20and%20Support" target="_blank" rel="noopener noreferrer" 
-                               class="w-full bg-slate-100 group-hover:bg-brand-green group-hover:text-white text-slate-800 font-semibold py-2.5 rounded-lg text-xs transition text-center flex items-center justify-center gap-2">
-                                <i class="fa-brands fa-whatsapp text-sm"></i> Request Support
-                            </a>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-bold text-base text-slate-900 mb-1">Hospital Goods & Supplies</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-6 flex-grow">Multi-parameter patient monitors, IV infusion stands, suction units, oxygen flowmeters, and ward furniture.</p>
+                            <button onclick="openModal('Hospital Supplies')" class="w-full bg-emerald-50 border border-emerald-200 hover:bg-[#0f291e] hover:text-white text-emerald-800 font-semibold py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-file-signature text-emerald-600 group-hover:text-white"></i> Request Quote
+                            </button>
                         </div>
                     </div>
 
@@ -376,140 +338,188 @@
             </div>
         </section>
 
-        <!-- MAP & LOCATION SECTION -->
-        <section id="location" class="py-16 bg-white border-t border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-6">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <!-- Location Section -->
+        <section id="location" class="py-16 bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div>
-                        <h2 class="text-2xl font-extrabold text-brand-navy">Shop Location on Google Maps</h2>
-                        <p class="text-slate-600 text-xs mt-1"><i class="fa-solid fa-location-dot text-brand-green mr-1"></i> Kupondole-1, Lalitpur, Nepal</p>
+                        <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight">Our Location</h2>
+                        <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-location-dot text-emerald-600 mr-1.5"></i> Kupondole-1, Lalitpur, Nepal</p>
                     </div>
-                    <a href="https://www.google.com/maps/search/Kupondole-1,+Lalitpur,+Nepal" target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center gap-2 text-xs font-bold text-brand-green hover:underline">
-                        <span>Open in Google Maps App</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <a href="https://www.google.com/maps/search/Kupondole-1,+Lalitpur,+Nepal" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-800 transition-colors">
+                        Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                     </a>
                 </div>
 
-                <!-- Embedded Google Maps iFrame -->
-                <div class="w-full h-80 sm:h-96 rounded-2xl overflow-hidden border border-slate-200 shadow-sm relative bg-slate-100">
+                <div class="w-full h-80 rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-sm">
                     <iframe 
-                        title="Bhimeshwor Diagnostic Support Location Map" 
+                        title="Office Location Map" 
                         src="https://maps.google.com/maps?q=Kupondole-1,+Lalitpur,+Nepal&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
                     </iframe>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
-        <section id="contact" class="py-16 lg:py-24 bg-brand-bg border-t border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
-                
-                <div class="space-y-6">
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy tracking-tight">
-                        Contact Details
-                    </h2>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Contact Bhimeshwor Diagnostic Support Pvt. Ltd. for medical supply orders, equipment quotes, and technical assistance.
-                    </p>
-
-                    <div class="space-y-4 text-sm text-slate-700">
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-brand-green flex items-center justify-center shrink-0"><i class="fa-solid fa-building"></i></div>
-                            <div>
-                                <p class="text-xs text-slate-500 uppercase font-semibold">Company Name</p>
-                                <p class="font-bold text-slate-800">Bhimeshwor Diagnostic Support Pvt. Ltd.</p>
-                            </div>
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-6">
+                        <div>
+                            <h2 class="text-xs font-bold text-emerald-700 uppercase tracking-widest">Get In Touch</h2>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-1">Contact Our Team</p>
+                            <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">Reach out directly for institutional orders, official quotations, or technical calibration support for your facility.</p>
                         </div>
 
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-brand-green flex items-center justify-center shrink-0"><i class="fa-solid fa-user-tie"></i></div>
-                            <div>
-                                <p class="text-xs text-slate-500 uppercase font-semibold">Contact Representative</p>
-                                <p class="font-bold text-slate-800">Jitendra Das Kayastha</p>
+                        <div class="space-y-4 text-xs sm:text-sm font-medium">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-building"></i>
+                                </div>
+                                <span class="text-slate-900 font-semibold">Bhimeshwori Diagnostic Support Pvt. Ltd.</span>
+                            </div>
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </div>
+                                <span class="text-slate-700">Jitendra Das Kayastha</span>
+                            </div>
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <span class="text-slate-700">Kupondole-1, Lalitpur, Nepal</span>
+                            </div>
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <a href="tel:015900069" class="text-slate-700 hover:text-emerald-700 transition-colors">01-5900069 / +977 9841914333</a>
+                            </div>
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <a href="mailto:bhimeshwor2010@gmail.com" class="text-slate-700 hover:text-emerald-700 transition-colors">bhimeshwor2010@gmail.com</a>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-brand-green flex items-center justify-center shrink-0"><i class="fa-solid fa-location-dot"></i></div>
-                            <div>
-                                <p class="text-xs text-slate-500 uppercase font-semibold">Location</p>
-                                <p class="font-bold text-slate-800">Kupondole-1, Lalitpur, Nepal</p>
-                            </div>
+                    <!-- Direct Instant Contact Box -->
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 text-center space-y-5 shadow-sm">
+                        <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl mx-auto border border-emerald-100">
+                            <i class="fa-brands fa-whatsapp"></i>
                         </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-brand-green flex items-center justify-center shrink-0"><i class="fa-solid fa-phone"></i></div>
-                            <div>
-                                <p class="text-xs text-slate-500 uppercase font-semibold">Phone & Mobile</p>
-                                <p class="font-bold text-slate-800">01-5900069 | 9841914333</p>
-                            </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base">Direct Instant Messaging</h3>
+                            <p class="text-xs text-slate-500 mt-1">Connect with our team directly on WhatsApp for immediate pricing and availability responses.</p>
                         </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-brand-green flex items-center justify-center shrink-0"><i class="fa-solid fa-envelope"></i></div>
-                            <div>
-                                <p class="text-xs text-slate-500 uppercase font-semibold">Email</p>
-                                <p class="font-bold text-slate-800">bhimeshwor2010@gmail.com</p>
-                            </div>
-                        </div>
+                        <a href="https://wa.me/9779841914333" target="_blank" class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 rounded-xl text-xs transition-all shadow-sm">
+                            Chat on WhatsApp
+                        </a>
                     </div>
                 </div>
-
-                <!-- Direct Order Card -->
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 space-y-6 text-center shadow-sm">
-                    <div class="w-16 h-16 bg-brand-green/10 text-brand-green rounded-full flex items-center justify-center text-3xl mx-auto">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-brand-navy">Direct Inquiry Line</h3>
-                        <p class="text-slate-600 text-xs mt-1">Connect directly via WhatsApp for equipment specifications and inquiries.</p>
-                    </div>
-                    <a href="https://wa.me/9779841914333" target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center justify-center gap-3 bg-brand-green hover:bg-emerald-800 text-white font-semibold py-3.5 px-8 rounded-xl w-full transition shadow-sm">
-                        <i class="fa-brands fa-whatsapp text-xl"></i>
-                        <span>Message (+977 9841914333)</span>
-                    </a>
-                </div>
-
             </div>
         </section>
-
     </main>
 
-    <!-- MOBILE STICKY QUICK ACTIONS (Visible on small screens) -->
-    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-3 flex gap-3 sm:hidden z-50 shadow-lg">
-        <a href="tel:9841914333" class="flex-1 bg-slate-900 text-white text-center py-2.5 rounded-lg text-xs font-bold flex items-center justify-center gap-2">
-            <i class="fa-solid fa-phone"></i> Call Now
-        </a>
-        <a href="https://wa.me/9779841914333" target="_blank" rel="noopener noreferrer" class="flex-1 bg-brand-green text-white text-center py-2.5 rounded-lg text-xs font-bold flex items-center justify-center gap-2">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </a>
+    <!-- Quotation Request Modal -->
+    <div id="quoteModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-xs z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 space-y-4 shadow-xl border border-slate-200 relative animate-in fade-in zoom-in duration-200">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div>
+                <h3 class="text-lg font-extrabold text-slate-900">Request Official Quotation</h3>
+                <p class="text-xs text-slate-500 mt-1">Fill out the details below to receive pricing and availability.</p>
+            </div>
+            <form onsubmit="handleQuoteSubmit(event)" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Product Category</label>
+                    <select id="modalCategory" class="w-full text-xs p-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                        <option value="Laboratory Equipment">Laboratory Equipment</option>
+                        <option value="Rapid Tests & Reagents">Rapid Tests & Reagents</option>
+                        <option value="Surgical Goods">Surgical Goods</option>
+                        <option value="X-Ray & Ventilators">X-Ray & ICU Imaging</option>
+                        <option value="Hospital Supplies">Hospital Supplies</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Organization / Hospital Name</label>
+                    <input type="text" required placeholder="e.g. Bir Hospital" class="w-full text-xs p-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Contact Phone</label>
+                    <input type="tel" required placeholder="01-XXXXXXX / 98XXXXXXXX" class="w-full text-xs p-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Quantity / Specific Requirements</label>
+                    <textarea rows="3" placeholder="Specify models or quantity required..." class="w-full text-xs p-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:outline-none"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-[#0f291e] hover:bg-emerald-900 text-white font-semibold py-2.5 rounded-xl text-xs transition-all shadow-sm">
+                    Submit Request via WhatsApp
+                </button>
+            </form>
+        </div>
     </div>
 
-    <!-- FOOTER -->
-    <footer class="bg-brand-navy text-slate-400 py-8 text-xs border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-            
-            <div class="flex items-center gap-3">
-                <!-- ==========================================
-                     REPLACE FOOTER LOGO HERE
-                     ========================================== -->
-                <img src="https://via.placeholder.com/100x100.png?text=BDS" 
-                     alt="Bhimeshwor Diagnostic Support Footer Logo" 
-                     class="w-6 h-6 object-contain">
-                <p>&copy; Bhimeshwor Diagnostic Support Pvt. Ltd.</p>
-            </div>
-
-            <p>Kupondole-1, Lalitpur, Nepal | Phone: 01-5900069 | Contact: Jitendra Das Kayastha (9841914333)</p>
+    <!-- Footer -->
+    <footer class="bg-[#0f291e] text-emerald-200/80 py-8 text-xs border-t border-emerald-900/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <p>&copy; Bhimeshwori Diagnostic Support Pvt. Ltd. All rights reserved.</p>
+            <p class="text-emerald-400">Kupondole-1, Lalitpur | 01-5900069 | 9841914333</p>
         </div>
     </footer>
 
+    <!-- Interactive Scripts -->
+    <script>
+        function filterProducts(category) {
+            const cards = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                if (btn.dataset.category === category) {
+                    btn.classList.add('bg-[#0f291e]', 'text-white', 'shadow-xs');
+                    btn.classList.remove('text-slate-700', 'hover:bg-white', 'hover:text-slate-900');
+                } else {
+                    btn.classList.remove('bg-[#0f291e]', 'text-white', 'shadow-xs');
+                    btn.classList.add('text-slate-700', 'hover:bg-white', 'hover:text-slate-900');
+                }
+            });
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function openModal(categoryName) {
+            if (categoryName) {
+                document.getElementById('modalCategory').value = categoryName;
+            }
+            document.getElementById('quoteModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('quoteModal').classList.add('hidden');
+        }
+
+        function handleQuoteSubmit(e) {
+            e.preventDefault();
+            const category = document.getElementById('modalCategory').value;
+            const message = encodeURIComponent(`Hello, I would like to request an official quotation for: ${category}`);
+            window.open(`https://wa.me/9779841914333?text=${message}`, '_blank');
+            closeModal();
+        }
+    </script>
 </body>
 </html>

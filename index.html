@@ -5,37 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhimeshwori Diagnostic Support Pvt. Ltd.</title>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Google Fonts: Plus Jakarta Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration (External JS) -->
+    <script src="tailwind-config.js"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { 
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'] 
-                    },
-                    colors: {
-                        brand: {
-                            green: '#2e7d32',
-                            teal: '#00838f',
-                            dark: '#0f291e',
-                            light: '#f1f8e9',
-                            accent: '#ffb300'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-emerald-100 selection:text-emerald-900">
 
@@ -58,7 +38,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             
             <!-- Logo -->
-            <a href="#" class="flex items-center gap-3 group">
+            <a href="index.html" class="flex items-center gap-3 group">
                 <div class="flex items-center gap-2">
                     <img src="images/logo.png" alt="Bhimeshwori Diagnostic Support Pvt. Ltd. logo" class="w-10 h-10 object-contain rounded-xl shadow-sm border border-slate-200 bg-white" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                     <div class="hidden relative w-10 h-10 flex items-center justify-center bg-gradient-to-tr from-green-600 via-teal-600 to-amber-500 rounded-xl shadow-sm text-white font-black text-lg">
@@ -73,7 +53,7 @@
 
             <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-600">
                 <a href="#about" class="hover:text-emerald-700 transition-colors">About</a>
-                <a href="#products" class="hover:text-emerald-700 transition-colors">Products</a>
+                <a href="products.html" class="hover:text-emerald-700 transition-colors">Products</a>
                 <a href="#strengths" class="hover:text-emerald-700 transition-colors">Quality Assurance</a>
                 <a href="#location" class="hover:text-emerald-700 transition-colors">Location</a>
                 <a href="#contact" class="hover:text-emerald-700 transition-colors">Contact</a>
@@ -96,7 +76,7 @@
         <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-3">
             <a href="#about" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-700 hover:text-emerald-700">About</a>
-            <a href="#products" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-700 hover:text-emerald-700">Products</a>
+            <a href="products.html" class="block text-sm font-semibold text-slate-700 hover:text-emerald-700">Products</a>
             <a href="#strengths" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-700 hover:text-emerald-700">Quality Assurance</a>
             <a href="#location" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-700 hover:text-emerald-700">Location</a>
             <a href="#contact" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-700 hover:text-emerald-700">Contact</a>
@@ -125,7 +105,8 @@
                     </p>
 
                     <div class="flex flex-wrap gap-4 pt-2">
-                        <a href="#products" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3.5 rounded-xl text-xs transition-all shadow-md hover:shadow-emerald-900/50 flex items-center gap-2">
+                        <!-- Redirects to products.html -->
+                        <a href="products.html" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3.5 rounded-xl text-xs transition-all shadow-md hover:shadow-emerald-900/50 flex items-center gap-2">
                             Explore Catalog <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </a>
                         <button onclick="openModal()" class="bg-emerald-950/80 border border-emerald-700/60 hover:bg-emerald-900 text-emerald-100 font-semibold px-6 py-3.5 rounded-xl text-xs transition-all flex items-center gap-2.5 shadow-sm">
@@ -151,7 +132,7 @@
 
                 <div class="lg:col-span-5">
                     <div class="rounded-3xl p-3 bg-gradient-to-br from-emerald-900/40 to-teal-900/20 border border-emerald-700/30 shadow-2xl backdrop-blur-sm relative group">
-                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80" alt="Advanced Diagnostic Equipment" class="w-full h-80 object-cover rounded-2xl shadow-inner group-hover:scale-[1.01] transition-transform duration-500">
+                        <img src="images/image1-lab.avif" alt="Advanced Diagnostic Equipment" class="w-full h-80 object-cover rounded-2xl shadow-inner group-hover:scale-[1.01] transition-transform duration-500">
                         <div class="absolute bottom-6 left-6 right-6 bg-slate-900/90 backdrop-blur-md p-3.5 rounded-xl border border-slate-700 flex items-center justify-between text-xs text-white">
                             <span class="font-semibold"><i class="fa-solid fa-shield-halved text-emerald-400 mr-2"></i> ISO & CE Certified Supply Chain</span>
                             <span class="text-emerald-400 font-bold">100% Assured</span>
@@ -183,154 +164,93 @@
             </div>
         </section>
 
-        <!-- Operational Strengths Infographic Section (Matching exact visual reference with badge icon for Quality Assured) -->
+        <!-- Operational Strengths Infographic Section -->
         <section id="strengths" class="py-20 bg-gradient-to-b from-white to-slate-50 border-b border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+                
+                <!-- Section Header -->
                 <div class="text-center max-w-2xl mx-auto space-y-3">
                     <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-100/80 px-3.5 py-1.5 rounded-full border border-emerald-200 shadow-xs">Our Core Operational Focus</span>
                     <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Excellence in Medical Logistics & Support</h2>
                     <p class="text-sm text-slate-600">Engineered workflow designed specifically to fulfill stringent hospital and pathology requirements.</p>
                 </div>
 
-                <!-- Process Flow Infographic Grid matching image_16863f.png precisely -->
+                <!-- Cards Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
                     
-                    <!-- Step 1: Quality Assured (Matching Image Design: Green badge, Light green soft card icon container with check-shield or award icon) -->
-                    <div class="bg-white p-7 rounded-2xl border border-emerald-100 shadow-sm hover:shadow-lg hover:border-emerald-300 transition-all relative flex flex-col items-center text-center group">
-                        <div class="absolute -top-4 w-9 h-9 rounded-xl bg-[#00a86b] text-white font-bold text-xs flex items-center justify-center shadow-md">01</div>
-                        <div class="w-16 h-16 bg-[#e8f8f0] text-[#00a86b] rounded-2xl flex items-center justify-center text-2xl mb-5 mt-2 group-hover:scale-110 group-hover:bg-[#00a86b] group-hover:text-white transition-all duration-300 border border-emerald-100 shadow-xs">
-                            <i class="fa-solid fa-award"></i>
+                    <!-- Step 1: Quality Assured -->
+                    <div class="bg-white rounded-2xl border border-emerald-100 shadow-sm hover:shadow-xl hover:border-emerald-300 transition-all duration-300 relative flex flex-col group mt-4">
+                        <!-- Floating Number -->
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-9 h-9 rounded-xl bg-[#00a86b] text-white font-bold text-xs flex items-center justify-center shadow-md z-20">01</div>
+                        
+                        <!-- Cover Image -->
+                        <div class="h-32 w-full rounded-t-2xl overflow-hidden relative">
+                            <img src="images/image2-tools.avif" alt="Quality Assured" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-emerald-900/10"></div>
                         </div>
-                        <h3 class="font-bold text-base text-slate-900 mb-2">Quality Assured</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed">Sourced directly from recognized manufacturers.</p>
+
+                        <!-- Content -->
+                        <div class="px-6 pb-7 pt-0 flex flex-col items-center text-center relative z-10 flex-grow">
+                            <!-- Overlapping Icon -->
+                            <div class="w-14 h-14 bg-white text-[#00a86b] rounded-2xl flex items-center justify-center text-xl -mt-7 mb-4 group-hover:bg-[#00a86b] group-hover:text-white transition-all duration-300 border-4 border-white shadow-md relative">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <h3 class="font-bold text-base text-slate-900 mb-2">Quality Assured</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">Sourced directly from recognized manufacturers.</p>
+                        </div>
                     </div>
 
                     <!-- Step 2: Cold-Chain Handling -->
-                    <div class="bg-white p-7 rounded-2xl border border-teal-100 shadow-sm hover:shadow-lg hover:border-teal-300 transition-all relative flex flex-col items-center text-center group">
-                        <div class="absolute -top-4 w-9 h-9 rounded-xl bg-[#008b8b] text-white font-bold text-xs flex items-center justify-center shadow-md">02</div>
-                        <div class="w-16 h-16 bg-[#e6f4f4] text-[#008b8b] rounded-2xl flex items-center justify-center text-2xl mb-5 mt-2 group-hover:scale-110 group-hover:bg-[#008b8b] group-hover:text-white transition-all duration-300 border border-teal-100 shadow-xs">
-                            <i class="fa-solid fa-snowflake"></i>
+                    <div class="bg-white rounded-2xl border border-teal-100 shadow-sm hover:shadow-xl hover:border-teal-300 transition-all duration-300 relative flex flex-col group mt-4">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-9 h-9 rounded-xl bg-[#008b8b] text-white font-bold text-xs flex items-center justify-center shadow-md z-20">02</div>
+                        
+                        <div class="h-32 w-full rounded-t-2xl overflow-hidden relative">
+                            <img src="images/image3-work.avif" alt="Cold Chain Handling" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-teal-900/10"></div>
                         </div>
-                        <h3 class="font-bold text-base text-slate-900 mb-2">Cold-Chain Handling</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed">Regulated reagent delivery & cold storage control.</p>
+
+                        <div class="px-6 pb-7 pt-0 flex flex-col items-center text-center relative z-10 flex-grow">
+                            <div class="w-14 h-14 bg-white text-[#008b8b] rounded-2xl flex items-center justify-center text-xl -mt-7 mb-4 group-hover:bg-[#008b8b] group-hover:text-white transition-all duration-300 border-4 border-white shadow-md relative">
+                                <i class="fa-solid fa-snowflake"></i>
+                            </div>
+                            <h3 class="font-bold text-base text-slate-900 mb-2">Cold-Chain Handling</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">Regulated reagent delivery & cold storage control.</p>
+                        </div>
                     </div>
 
                     <!-- Step 3: Maintenance Support -->
-                    <div class="bg-white p-7 rounded-2xl border border-cyan-100 shadow-sm hover:shadow-lg hover:border-cyan-300 transition-all relative flex flex-col items-center text-center group">
-                        <div class="absolute -top-4 w-9 h-9 rounded-xl bg-[#2563eb] text-white font-bold text-xs flex items-center justify-center shadow-md">03</div>
-                        <div class="w-16 h-16 bg-[#eff6ff] text-[#2563eb] rounded-2xl flex items-center justify-center text-2xl mb-5 mt-2 group-hover:scale-110 group-hover:bg-[#2563eb] group-hover:text-white transition-all duration-300 border border-cyan-100 shadow-xs">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <div class="bg-white rounded-2xl border border-blue-100 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 relative flex flex-col group mt-4">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-9 h-9 rounded-xl bg-[#2563eb] text-white font-bold text-xs flex items-center justify-center shadow-md z-20">03</div>
+                        
+                        <div class="h-32 w-full rounded-t-2xl overflow-hidden relative">
+                            <img src="images/image2-tools.avif" alt="Maintenance Support" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-blue-900/10"></div>
                         </div>
-                        <h3 class="font-bold text-base text-slate-900 mb-2">Maintenance Support</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed">On-site setup and technical calibration assistance.</p>
+
+                        <div class="px-6 pb-7 pt-0 flex flex-col items-center text-center relative z-10 flex-grow">
+                            <div class="w-14 h-14 bg-white text-[#2563eb] rounded-2xl flex items-center justify-center text-xl -mt-7 mb-4 group-hover:bg-[#2563eb] group-hover:text-white transition-all duration-300 border-4 border-white shadow-md relative">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                            <h3 class="font-bold text-base text-slate-900 mb-2">Maintenance Support</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">On-site setup and technical calibration assistance.</p>
+                        </div>
                     </div>
 
                     <!-- Step 4: Bulk Orders -->
-                    <div class="bg-white p-7 rounded-2xl border border-amber-100 shadow-sm hover:shadow-lg hover:border-amber-300 transition-all relative flex flex-col items-center text-center group">
-                        <div class="absolute -top-4 w-9 h-9 rounded-xl bg-[#f97316] text-white font-bold text-xs flex items-center justify-center shadow-md">04</div>
-                        <div class="w-16 h-16 bg-[#fffbeb] text-[#f97316] rounded-2xl flex items-center justify-center text-2xl mb-5 mt-2 group-hover:scale-110 group-hover:bg-[#f97316] group-hover:text-white transition-all duration-300 border border-amber-100 shadow-xs">
-                            <i class="fa-solid fa-boxes-stacked"></i>
+                    <div class="bg-white rounded-2xl border border-orange-100 shadow-sm hover:shadow-xl hover:border-orange-300 transition-all duration-300 relative flex flex-col group mt-4">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-9 h-9 rounded-xl bg-[#f97316] text-white font-bold text-xs flex items-center justify-center shadow-md z-20">04</div>
+                        
+                        <div class="h-32 w-full rounded-t-2xl overflow-hidden relative">
+                            <img src="images/bulkorder.webp" alt="Bulk Orders" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-orange-900/10"></div>
                         </div>
-                        <h3 class="font-bold text-base text-slate-900 mb-2">Bulk Orders</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed">Custom supply solutions for hospitals & labs.</p>
-                    </div>
 
-                </div>
-            </div>
-        </section>
-
-        <!-- Product Catalog Section -->
-        <section id="products" class="py-16 bg-slate-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
-                    <div>
-                        <h2 class="text-xs font-bold text-emerald-700 uppercase tracking-widest">Medical Supplies Catalog</h2>
-                        <p class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-1">Equipment & Diagnostic Supplies</p>
-                    </div>
-
-                    <!-- Category Filter Buttons -->
-                    <div class="flex flex-wrap gap-2 bg-slate-200/80 p-1.5 rounded-xl border border-slate-300 text-xs font-semibold">
-                        <button onclick="filterProducts('all')" class="filter-btn active-tab px-4 py-2 rounded-lg bg-[#0f291e] text-white transition-all shadow-xs" data-category="all">All Items</button>
-                        <button onclick="filterProducts('lab')" class="filter-btn px-4 py-2 rounded-lg text-slate-700 hover:bg-white hover:text-slate-900 transition-all" data-category="lab">Lab Equipment</button>
-                        <button onclick="filterProducts('reagents')" class="filter-btn px-4 py-2 rounded-lg text-slate-700 hover:bg-white hover:text-slate-900 transition-all" data-category="reagents">Kits & Reagents</button>
-                        <button onclick="filterProducts('imaging')" class="filter-btn px-4 py-2 rounded-lg text-slate-700 hover:bg-white hover:text-slate-900 transition-all" data-category="imaging">ICU & Imaging</button>
-                    </div>
-                </div>
-
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-                    <!-- Card 1 -->
-                    <div class="product-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:border-emerald-500 hover:shadow-md transition-all flex flex-col group" data-category="lab">
-                        <div class="h-48 relative overflow-hidden bg-slate-100">
-                            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80" alt="Lab Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 bg-emerald-950/90 backdrop-blur-md text-emerald-200 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-emerald-800">Hardware</span>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="font-bold text-base text-slate-900 mb-1">Laboratory Equipment</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-6 flex-grow">Centrifuges, binocular microscopes, incubators, automated hematology analyzers, and water baths.</p>
-                            <button onclick="openModal('Laboratory Equipment')" class="w-full bg-emerald-50 border border-emerald-200 hover:bg-[#0f291e] hover:text-white text-emerald-800 font-semibold py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-file-signature text-emerald-600 group-hover:text-white"></i> Request Quote
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="product-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:border-emerald-500 hover:shadow-md transition-all flex flex-col group" data-category="reagents">
-                        <div class="h-48 relative overflow-hidden bg-slate-100">
-                            <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=800&q=80" alt="Reagents" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 bg-emerald-950/90 backdrop-blur-md text-emerald-200 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-emerald-800">Consumables</span>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="font-bold text-base text-slate-900 mb-1">Rapid Tests & Reagents</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-6 flex-grow">Rapid test cassettes (Dengue, Typhoid, HBV, HIV), biochemistry reagents, and staining chemicals under cold chain.</p>
-                            <button onclick="openModal('Rapid Tests & Reagents')" class="w-full bg-emerald-50 border border-emerald-200 hover:bg-[#0f291e] hover:text-white text-emerald-800 font-semibold py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-file-signature text-emerald-600 group-hover:text-white"></i> Request Quote
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="product-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:border-emerald-500 hover:shadow-md transition-all flex flex-col group" data-category="lab">
-                        <div class="h-48 relative overflow-hidden bg-slate-100">
-                            <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80" alt="Surgical Tools" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 bg-emerald-950/90 backdrop-blur-md text-emerald-200 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-emerald-800">Surgical</span>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="font-bold text-base text-slate-900 mb-1">Surgical Goods & Tools</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-6 flex-grow">Stainless steel OT instruments, forcep sets, scalpels, sterile sutures, and examination gloves.</p>
-                            <button onclick="openModal('Surgical Goods')" class="w-full bg-emerald-50 border border-emerald-200 hover:bg-[#0f291e] hover:text-white text-emerald-800 font-semibold py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-file-signature text-emerald-600 group-hover:text-white"></i> Request Quote
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="product-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:border-emerald-500 hover:shadow-md transition-all flex flex-col group" data-category="imaging">
-                        <div class="h-48 relative overflow-hidden bg-slate-100">
-                            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80" alt="X-Ray & Ventilator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 bg-emerald-950/90 backdrop-blur-md text-emerald-200 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-emerald-800">Imaging</span>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="font-bold text-base text-slate-900 mb-1">X-Ray, Ventilator & C-Arm</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-6 flex-grow">Digital X-ray units, mobile C-arms, ICU ventilators, lead protective aprons, and radiograph plates.</p>
-                            <button onclick="openModal('X-Ray & Ventilators')" class="w-full bg-emerald-50 border border-emerald-200 hover:bg-[#0f291e] hover:text-white text-emerald-800 font-semibold py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-file-signature text-emerald-600 group-hover:text-white"></i> Request Quote
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="product-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:border-emerald-500 hover:shadow-md transition-all flex flex-col group" data-category="imaging">
-                        <div class="h-48 relative overflow-hidden bg-slate-100">
-                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="Hospital Supplies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 bg-emerald-950/90 backdrop-blur-md text-emerald-200 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-emerald-800">ICU & Ward</span>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="font-bold text-base text-slate-900 mb-1">Hospital Goods & Supplies</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-6 flex-grow">Multi-parameter patient monitors, IV infusion stands, suction units, oxygen flowmeters, and ward furniture.</p>
-                            <button onclick="openModal('Hospital Supplies')" class="w-full bg-emerald-50 border border-emerald-200 hover:bg-[#0f291e] hover:text-white text-emerald-800 font-semibold py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-file-signature text-emerald-600 group-hover:text-white"></i> Request Quote
-                            </button>
+                        <div class="px-6 pb-7 pt-0 flex flex-col items-center text-center relative z-10 flex-grow">
+                            <div class="w-14 h-14 bg-white text-[#f97316] rounded-2xl flex items-center justify-center text-xl -mt-7 mb-4 group-hover:bg-[#f97316] group-hover:text-white transition-all duration-300 border-4 border-white shadow-md relative">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                            </div>
+                            <h3 class="font-bold text-base text-slate-900 mb-2">Bulk Orders</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">Custom supply solutions for hospitals & labs.</p>
                         </div>
                     </div>
 
@@ -434,10 +354,11 @@
                 <h3 class="text-lg font-extrabold text-slate-900">Request Official Quotation</h3>
                 <p class="text-xs text-slate-500 mt-1">Fill out the details below to receive pricing and availability.</p>
             </div>
-            <form onsubmit="handleQuoteSubmit(event)" class="space-y-3">
+            <form id="quoteForm" class="space-y-3">
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1">Product Category</label>
                     <select id="modalCategory" class="w-full text-xs p-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                        <option value="General Inquiry">General Inquiry</option>
                         <option value="Laboratory Equipment">Laboratory Equipment</option>
                         <option value="Rapid Tests & Reagents">Rapid Tests & Reagents</option>
                         <option value="Surgical Goods">Surgical Goods</option>
@@ -472,54 +393,9 @@
         </div>
     </footer>
 
-    <!-- Interactive Scripts -->
-    <script>
-        function filterProducts(category) {
-            const cards = document.querySelectorAll('.product-card');
-            const buttons = document.querySelectorAll('.filter-btn');
-
-            buttons.forEach(btn => {
-                if (btn.dataset.category === category) {
-                    btn.classList.add('bg-[#0f291e]', 'text-white', 'shadow-xs');
-                    btn.classList.remove('text-slate-700', 'hover:bg-white', 'hover:text-slate-900');
-                } else {
-                    btn.classList.remove('bg-[#0f291e]', 'text-white', 'shadow-xs');
-                    btn.classList.add('text-slate-700', 'hover:bg-white', 'hover:text-slate-900');
-                }
-            });
-
-            cards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
-
-        function openModal(categoryName) {
-            if (categoryName) {
-                document.getElementById('modalCategory').value = categoryName;
-            }
-            document.getElementById('quoteModal').classList.remove('hidden');
-        }
-
-        function closeModal() {
-            document.getElementById('quoteModal').classList.add('hidden');
-        }
-
-        function handleQuoteSubmit(e) {
-            e.preventDefault();
-            const category = document.getElementById('modalCategory').value;
-            const message = encodeURIComponent(`Hello, I would like to request an official quotation for: ${category}`);
-            window.open(`https://wa.me/9779841914333?text=${message}`, '_blank');
-            closeModal();
-        }
-    </script>
+    <!-- Custom JavaScript linked here -->
+    <script src="script.js"></script>
 </body>
 </html>
+
+

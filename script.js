@@ -71,26 +71,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// --- TARGETED SOURCE CODE COPY WARNING ---
-// Allows viewing the source code normally, but intercepts copying specifically inside browser source view/inspector
-document.addEventListener('copy', function (e) {
-    const activeElement = document.activeElement;
+// --- DISABLE VIEW SOURCE SHORTCUTS ---
+document.addEventListener('keydown', function (e) {
+    // Intercept Ctrl + U (View Source) and Ctrl + S (Save Page)
+    if (e.ctrlKey && (e.key.toLowerCase() === 'u' || e.key.toLowerCase() === 's')) {
+        e.preventDefault();
+        alert("View source is disabled for this website. Copyright © Bhimeshwori Diagnostic Support Pvt. Ltd.");
+    }
     
-    // Check if the user is copying from a code element, pre tag, or developer tools view
-    const isSourceOrCodeView = activeElement.tagName === 'CODE' || 
-                               activeElement.tagName === 'PRE' || 
-                               window.getSelection().toString().includes('html') || 
-                               window.getSelection().toString().includes('<!DOCTYPE');
-
-    if (isSourceOrCodeView) {
-        e.preventDefault(); // Stop actual source code from copying
-        
-        // Specific warning message to copy instead
-        const warningMessage = "⚠️ WARNING: Source code protected! Copyright © Bhimeshwori Diagnostic Support Pvt. Ltd. All rights reserved. Please give credit to the real owner.";
-        
-        if (e.clipboardData) {
-            e.clipboardData.setData('text/plain', warningMessage);
-        }
+    // Optional: Block F12 (Developer Tools)
+    if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && ['i', 'j', 'c'].includes(e.key.toLowerCase()))) {
+        e.preventDefault();
     }
 });
 

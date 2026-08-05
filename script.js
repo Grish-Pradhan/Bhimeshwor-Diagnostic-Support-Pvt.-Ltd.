@@ -71,20 +71,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// --- SOURCE CODE PROTECTION (CTRL + U / CTRL + S INTERCEPTION) ---
-document.addEventListener('keydown', function (e) {
-    // Check for Ctrl + U (View Source) or Ctrl + S (Save Page)
-    if (e.ctrlKey && (e.key.toLowerCase() === 'u' || e.key.toLowerCase() === 's')) {
-        e.preventDefault(); // Stop the default browser action
-        
-        // Custom message to copy to the user's clipboard
-        const customMessage = "Source code protected. Copyright © Bhimeshwori Diagnostic Support Pvt. Ltd. All rights reserved. Please give credit to the real owner.";
-        
-        navigator.clipboard.writeText(customMessage).then(() => {
-            alert("Source code access is restricted. A copyright notice has been copied to your clipboard.");
-        }).catch(err => {
-            console.error('Failed to copy text: ', err);
-        });
+// --- COPY INTERCEPTION PROTECTION ---
+// Allows viewing the source code/page normally, but intercepts any copy action
+document.addEventListener('copy', function (e) {
+    e.preventDefault(); // Stop the default copied content
+    
+    const customMessage = "Source code protected. Copyright © Bhimeshwori Diagnostic Support Pvt. Ltd. All rights reserved. Please give credit to the real owner.";
+    
+    // Check if clipboard API is available
+    if (e.clipboardData) {
+        e.clipboardData.setData('text/plain', customMessage);
     }
 });
 

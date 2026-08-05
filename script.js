@@ -1,7 +1,7 @@
 // Ensure the script runs after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- SEARCH AND FILTER LOGIC ---
+    // --- ADVANCED SEARCH AND FILTER LOGIC ---
     const searchInput = document.getElementById('searchInput');
     const filterBtns = document.querySelectorAll('.filter-btn');
     const productCards = document.querySelectorAll('.product-card');
@@ -9,15 +9,23 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentCategory = 'all';
 
     function filterProducts() {
-        const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+        // Clean and split the search term into individual keywords for accurate multi-word matching
+        const rawSearchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
+        const searchKeywords = rawSearchTerm ? rawSearchTerm.split(/\s+/) : [];
         let visibleCount = 0;
 
         productCards.forEach(card => {
-            const category = card.dataset.category;
+            const category = card.dataset.category || '';
             const nameKeywords = card.dataset.name ? card.dataset.name.toLowerCase() : '';
+            const description = card.innerText ? card.innerText.toLowerCase() : '';
             
+            // Check category match
             const matchesCategory = currentCategory === 'all' || category === currentCategory;
-            const matchesSearch = nameKeywords.includes(searchTerm);
+            
+            // Check if ALL typed search keywords match either the product name or its text content
+            const matchesSearch = searchKeywords.length === 0 || searchKeywords.every(keyword => 
+                nameKeywords.includes(keyword) || description.includes(keyword)
+            );
 
             if (matchesCategory && matchesSearch) {
                 card.style.display = 'flex';
@@ -27,13 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Toggle the empty state message if no products match
+        // Toggle the empty state message accurately if no products match
         if (noResults) {
             noResults.style.display = visibleCount === 0 ? 'block' : 'none';
         }
     }
 
-    // Attach event listeners if the elements exist on the page
+    // Attach event listeners for real-time efficient searching
     if (searchInput) {
         searchInput.addEventListener('input', filterProducts);
     }
@@ -41,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (filterBtns) {
         filterBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
-                // Reset styling for all buttons
+                // Reset styling for all category buttons
                 filterBtns.forEach(b => {
                     b.classList.remove('bg-[#0f291e]', 'text-white');
                     b.classList.add('text-slate-600', 'hover:bg-white', 'hover:text-slate-900');
@@ -51,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.target.classList.add('bg-[#0f291e]', 'text-white');
                 e.target.classList.remove('text-slate-600', 'hover:bg-white', 'hover:text-slate-900');
 
-                // Apply the filter
+                // Apply the category filter and re-run search evaluation
                 currentCategory = e.target.dataset.category;
                 filterProducts();
             });
@@ -71,22 +79,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// --- DISABLE RIGHT-CLICK & VIEW SOURCE SHORTCUTS ---
+// --- SOURCE CODE & RIGHT-CLICK PROTECTION ---
 
-// 1. Disable Right-Click Context Menu manually
+// 1. Disable Right-Click Context Menu
 document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
 });
 
 // 2. Disable Keyboard Shortcuts (Ctrl+U, F12, etc.)
 document.addEventListener('keydown', function (e) {
-    // Intercept Ctrl + U (View Source) and Ctrl + S (Save Page)
     if (e.ctrlKey && (e.key.toLowerCase() === 'u' || e.key.toLowerCase() === 's')) {
         e.preventDefault();
         alert("Action restricted. Copyright © Bhimeshwori Diagnostic Support Pvt. Ltd.");
     }
     
-    // Block F12 and Developer Tools inspector shortcuts
     if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && ['i', 'j', 'c'].includes(e.key.toLowerCase()))) {
         e.preventDefault();
     }

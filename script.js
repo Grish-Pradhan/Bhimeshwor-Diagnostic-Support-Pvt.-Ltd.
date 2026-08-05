@@ -71,16 +71,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// --- COPY INTERCEPTION PROTECTION ---
-// Allows viewing the source code/page normally, but intercepts any copy action
+// --- TARGETED SOURCE CODE COPY WARNING ---
+// Allows viewing the source code normally, but intercepts copying specifically inside browser source view/inspector
 document.addEventListener('copy', function (e) {
-    e.preventDefault(); // Stop the default copied content
+    const activeElement = document.activeElement;
     
-    const customMessage = "Source code protected. Copyright © Bhimeshwori Diagnostic Support Pvt. Ltd. All rights reserved. Please give credit to the real owner.";
-    
-    // Check if clipboard API is available
-    if (e.clipboardData) {
-        e.clipboardData.setData('text/plain', customMessage);
+    // Check if the user is copying from a code element, pre tag, or developer tools view
+    const isSourceOrCodeView = activeElement.tagName === 'CODE' || 
+                               activeElement.tagName === 'PRE' || 
+                               window.getSelection().toString().includes('html') || 
+                               window.getSelection().toString().includes('<!DOCTYPE');
+
+    if (isSourceOrCodeView) {
+        e.preventDefault(); // Stop actual source code from copying
+        
+        // Specific warning message to copy instead
+        const warningMessage = "⚠️ WARNING: Source code protected! Copyright © Bhimeshwori Diagnostic Support Pvt. Ltd. All rights reserved. Please give credit to the real owner.";
+        
+        if (e.clipboardData) {
+            e.clipboardData.setData('text/plain', warningMessage);
+        }
     }
 });
 

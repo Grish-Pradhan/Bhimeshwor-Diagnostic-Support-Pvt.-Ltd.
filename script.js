@@ -71,15 +71,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// --- DISABLE VIEW SOURCE SHORTCUTS ---
+// --- DISABLE RIGHT-CLICK & VIEW SOURCE SHORTCUTS ---
+
+// 1. Disable Right-Click Context Menu manually
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+
+// 2. Disable Keyboard Shortcuts (Ctrl+U, F12, etc.)
 document.addEventListener('keydown', function (e) {
     // Intercept Ctrl + U (View Source) and Ctrl + S (Save Page)
     if (e.ctrlKey && (e.key.toLowerCase() === 'u' || e.key.toLowerCase() === 's')) {
         e.preventDefault();
-        alert("View source is disabled for this website. Copyright © Bhimeshwori Diagnostic Support Pvt. Ltd.");
+        alert("Action restricted. Copyright © Bhimeshwori Diagnostic Support Pvt. Ltd.");
     }
     
-    // Optional: Block F12 (Developer Tools)
+    // Block F12 and Developer Tools inspector shortcuts
     if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && ['i', 'j', 'c'].includes(e.key.toLowerCase()))) {
         e.preventDefault();
     }

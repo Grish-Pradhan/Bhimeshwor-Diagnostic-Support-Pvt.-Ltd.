@@ -44,7 +44,7 @@
         }
     </script>
     <style>
-        /* Modern Clean Background with Medical Accent Gradient */
+        /* Body Background Pattern */
         body {
             background-color: #f8fafc;
             background-image: 
@@ -53,35 +53,35 @@
             background-attachment: fixed;
         }
 
-        /* Smooth Accordion Unfold Mechanics */
+        /* Smooth Card Drawer Accordion Mechanics */
         .card-expand-drawer {
             display: grid;
             grid-template-rows: 0fr;
-            transition: grid-template-rows 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         
         .card-expand-drawer.is-open {
             grid-template-rows: 1fr;
         }
 
-        /* Main Playcard Unique Elevate Styling */
+        /* Main Playcard Unique Elevation */
         .main-playcard {
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .main-playcard.is-active {
             border-color: #059669 !important;
-            box-shadow: 0 20px 40px -15px rgba(5, 150, 105, 0.15), 0 0 0 2px rgba(16, 185, 129, 0.2);
+            box-shadow: 0 20px 35px -10px rgba(5, 150, 105, 0.18), 0 0 0 2px rgba(16, 185, 129, 0.25);
         }
 
-        /* Sub-Card Staggered Reveal Animation */
+        /* Sub-Card Reveal Transitions */
         .sub-card-item {
             opacity: 0;
-            transform: translateY(18px) scale(0.97);
-            transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-                        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                        box-shadow 0.3s ease, 
-                        border-color 0.3s ease;
+            transform: translateY(12px) scale(0.98);
+            transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+                        transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.2s ease, 
+                        border-color 0.2s ease;
         }
 
         .is-open .sub-card-item {
@@ -89,12 +89,12 @@
             transform: translateY(0) scale(1);
         }
 
-        .is-open .sub-card-1 { transition-delay: 0.06s; }
-        .is-open .sub-card-2 { transition-delay: 0.12s; }
-        .is-open .sub-card-3 { transition-delay: 0.18s; }
-        .is-open .sub-card-4 { transition-delay: 0.24s; }
+        .is-open .sub-card-1 { transition-delay: 0.05s; }
+        .is-open .sub-card-2 { transition-delay: 0.10s; }
+        .is-open .sub-card-3 { transition-delay: 0.15s; }
+        .is-open .sub-card-4 { transition-delay: 0.20s; }
 
-        /* Rotate Indicator Chevron */
+        /* Rotate Chevron Indicator */
         .chevron-toggle {
             transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s, color 0.3s;
         }
@@ -105,10 +105,10 @@
             color: #ffffff;
         }
 
-        /* Shimmer Effect on Featured Badges */
+        /* Pulse Dot Animation */
         @keyframes subtlePulse {
             0%, 100% { opacity: 1; }
-            50% { opacity: 0.6; }
+            50% { opacity: 0.5; }
         }
         .pulse-dot {
             animation: subtlePulse 2s infinite ease-in-out;
@@ -117,7 +117,7 @@
 </head>
 <body class="text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-medical-500 selection:text-white">
 
-    <!-- Top Corporate Info Bar -->
+    <!-- Top Info Bar (Synced with index.html Navy Theme) -->
     <div class="bg-navy-950 text-slate-300 text-xs py-2.5 border-b border-navy-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
             <div class="flex items-center gap-6">
@@ -132,27 +132,27 @@
         </div>
     </div>
 
-    <!-- Main Navigation Header -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+    <!-- Navigation Header (Synced with index.html Theme) -->
+    <header class="sticky top-0 z-50 bg-navy-950 border-b border-navy-800 text-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3.5 group">
-                <div class="w-11 h-11 bg-gradient-to-br from-medical-600 to-medical-800 rounded-xl flex items-center justify-center text-white font-extrabold text-xl shadow-md shadow-medical-900/10 group-hover:scale-105 transition-transform">
+                <div class="w-11 h-11 bg-gradient-to-br from-medical-500 to-medical-700 rounded-xl flex items-center justify-center text-white font-extrabold text-xl shadow-md group-hover:scale-105 transition-transform">
                     B
                 </div>
                 <div>
-                    <span class="font-extrabold text-base text-navy-900 tracking-tight block leading-none">BHIMESHWORI</span>
-                    <span class="text-[10px] font-bold text-medical-600 tracking-wider uppercase block mt-1">Diagnostic Support Pvt. Ltd.</span>
+                    <span class="font-extrabold text-base text-white tracking-tight block leading-none">BHIMESHWORI</span>
+                    <span class="text-[10px] font-bold text-medical-400 tracking-wider uppercase block mt-1">Diagnostic Support Pvt. Ltd.</span>
                 </div>
             </a>
             
-            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-600">
-                <a href="index.html" class="hover:text-medical-600 transition-colors">Home</a>
-                <a href="products.html" class="text-medical-700 font-bold border-b-2 border-medical-600 pb-1 flex items-center gap-2">
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-300">
+                <a href="index.html" class="hover:text-medical-400 transition-colors">Home</a>
+                <a href="products.html" class="text-medical-400 font-bold border-b-2 border-medical-500 pb-1 flex items-center gap-2">
                     <i class="fa-solid fa-boxes-stacked text-xs"></i> Products Catalog
                 </a>
             </nav>
 
-            <a href="https://wa.me/9779841914333" target="_blank" class="bg-medical-600 hover:bg-medical-700 text-white px-5 py-2.5 rounded-xl text-xs font-bold shadow-md shadow-medical-600/20 transition-all hover:shadow-lg hover:shadow-medical-600/30 active:scale-95 flex items-center gap-2">
+            <a href="https://wa.me/9779841914333" target="_blank" class="bg-medical-600 hover:bg-medical-500 text-white px-5 py-2.5 rounded-xl text-xs font-bold shadow-md transition-all active:scale-95 flex items-center gap-2">
                 <i class="fa-brands fa-whatsapp text-sm"></i> Direct WhatsApp Inquiry
             </a>
         </div>
@@ -168,38 +168,34 @@
                     <span class="w-2 h-2 rounded-full bg-medical-500 pulse-dot"></span>
                     Interactive Diagnostic Portfolio
                 </div>
-                <h1 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-navy-950 tracking-tight">
                     Medical & Diagnostic <span class="text-medical-600">Equipment Catalog</span>
                 </h1>
                 <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                    Click on any core product category card to unfold specialized sub-categories, technical details, and diagnostic instruments.
+                    Click any product playcard to expand technical sub-categories, certified instruments, and request direct quotes.
                 </p>
             </div>
 
             <!-- Product Category Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 
-                <!-- MAIN PLAYCARD 1: Lab Equipment -->
+                <!-- PLAYCARD 1: Advanced Lab Equipment -->
                 <div id="parent-card-1" class="main-playcard bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden hover:border-medical-400">
-                    
-                    <!-- Clickable Card Banner -->
                     <div onclick="togglePlaycard('drawer-lab', 'parent-card-1')" class="cursor-pointer relative group">
-                        <div class="h-60 w-full relative overflow-hidden bg-navy-900">
-                            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1000&q=80" alt="Advanced Lab Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90">
+                        <div class="h-60 w-full relative overflow-hidden bg-navy-950">
+                            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1000&q=80" alt="Advanced Lab Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-85">
                             <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent"></div>
                             
-                            <!-- Category Badge -->
-                            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-navy-900 text-[11px] font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
+                            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-navy-950 text-[11px] font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
                                 <i class="fa-solid fa-microscope text-medical-600"></i> Category 01
                             </div>
 
-                            <!-- Title & Subtitle -->
                             <div class="absolute bottom-5 left-6 right-6 flex items-end justify-between gap-4">
                                 <div class="space-y-1">
-                                    <h2 class="text-2xl font-extrabold text-white group-hover:text-medical-300 transition-colors flex items-center gap-2">
+                                    <h2 class="text-2xl font-extrabold text-white group-hover:text-medical-300 transition-colors">
                                         Advanced Lab Equipment
                                     </h2>
-                                    <p class="text-xs text-slate-300 font-medium leading-relaxed">Centrifuges, optical microscopes, incubators & automated analyzers.</p>
+                                    <p class="text-xs text-slate-300 font-medium leading-relaxed">Centrifuges, optical microscopes, incubators & analyzers.</p>
                                 </div>
                                 <div class="w-11 h-11 rounded-2xl bg-white/20 backdrop-blur-md text-white flex items-center justify-center chevron-toggle shrink-0 shadow-lg border border-white/30">
                                     <i class="fa-solid fa-chevron-down text-sm"></i>
@@ -207,114 +203,93 @@
                             </div>
                         </div>
 
-                        <!-- Card Expand Action Bar -->
                         <div class="bg-slate-50 border-t border-slate-200/80 px-6 py-3.5 flex items-center justify-between text-xs font-bold text-slate-700">
                             <span class="flex items-center gap-2 text-medical-700">
-                                <i class="fa-solid fa-layer-group text-medical-600"></i> 4 Sub-Categories Available
+                                <i class="fa-solid fa-layer-group text-medical-600"></i> 4 Sub-Categories
                             </span>
                             <span class="text-slate-500 group-hover:text-medical-600 transition-colors flex items-center gap-1.5">
-                                Click to View Products <i class="fa-solid fa-arrow-down-long text-[10px]"></i>
+                                Expand Details <i class="fa-solid fa-arrow-down-long text-[10px]"></i>
                             </span>
                         </div>
                     </div>
 
-                    <!-- Expandable Sub-Playcards Container -->
                     <div id="drawer-lab" class="card-expand-drawer">
                         <div class="overflow-hidden">
                             <div class="p-6 bg-slate-50/70 border-t border-slate-200/80 space-y-4">
                                 <div class="flex items-center justify-between border-b border-slate-200 pb-3">
-                                    <h3 class="text-xs font-extrabold text-navy-900 uppercase tracking-wider flex items-center gap-2">
+                                    <h3 class="text-xs font-extrabold text-navy-950 uppercase tracking-wider flex items-center gap-2">
                                         <i class="fa-solid fa-flask text-medical-600"></i> Specialized Instruments
                                     </h3>
                                     <span class="text-[10px] bg-medical-100 text-medical-800 font-bold px-2 py-0.5 rounded">ISO & CE Certified</span>
                                 </div>
                                 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    
-                                    <!-- Sub-Card 1 -->
                                     <div class="sub-card-item sub-card-1 bg-white rounded-2xl p-3.5 border border-slate-200 hover:border-medical-500 hover:shadow-md flex gap-3.5 group/sub transition-all">
                                         <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-slate-100 bg-slate-100">
-                                            <img src="https://images.unsplash.com/photo-1582719280063-440360a0f4c3?auto=format&fit=crop&w=300&q=80" alt="Centrifuges" class="w-full h-full object-cover group-hover/sub:scale-105 transition-transform duration-500">
+                                            <img src="https://images.unsplash.com/photo-1582719280063-440360a0f4c3?auto=format&fit=crop&w=300&q=80" alt="Centrifuges" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-grow flex flex-col justify-center">
-                                            <div class="flex items-center justify-between">
-                                                <h4 class="text-xs font-bold text-navy-900 group-hover/sub:text-medical-600 transition-colors">Centrifuges</h4>
-                                                <span class="text-[9px] bg-slate-100 text-slate-600 font-semibold px-1.5 py-0.5 rounded">High Speed</span>
-                                            </div>
+                                            <h4 class="text-xs font-bold text-navy-950 group-hover/sub:text-medical-600 transition-colors">Centrifuges</h4>
                                             <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Precision brushless motors for blood & serum separation.</p>
                                         </div>
                                     </div>
 
-                                    <!-- Sub-Card 2 -->
                                     <div class="sub-card-item sub-card-2 bg-white rounded-2xl p-3.5 border border-slate-200 hover:border-medical-500 hover:shadow-md flex gap-3.5 group/sub transition-all">
                                         <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-slate-100 bg-slate-100">
-                                            <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f1e0?auto=format&fit=crop&w=300&q=80" alt="Microscopes" class="w-full h-full object-cover group-hover/sub:scale-105 transition-transform duration-500">
+                                            <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f1e0?auto=format&fit=crop&w=300&q=80" alt="Microscopes" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-grow flex flex-col justify-center">
-                                            <div class="flex items-center justify-between">
-                                                <h4 class="text-xs font-bold text-navy-900 group-hover/sub:text-medical-600 transition-colors">Binocular Optics</h4>
-                                                <span class="text-[9px] bg-slate-100 text-slate-600 font-semibold px-1.5 py-0.5 rounded">LED Optics</span>
-                                            </div>
-                                            <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Clinical grade multi-layer illumination for pathology.</p>
+                                            <h4 class="text-xs font-bold text-navy-950 group-hover/sub:text-medical-600 transition-colors">Binocular Optics</h4>
+                                            <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Clinical grade LED illumination for pathology labs.</p>
                                         </div>
                                     </div>
 
-                                    <!-- Sub-Card 3 -->
                                     <div class="sub-card-item sub-card-3 bg-white rounded-2xl p-3.5 border border-slate-200 hover:border-medical-500 hover:shadow-md flex gap-3.5 group/sub transition-all">
                                         <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-slate-100 bg-slate-100">
-                                            <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=300&q=80" alt="Incubators" class="w-full h-full object-cover group-hover/sub:scale-105 transition-transform duration-500">
+                                            <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=300&q=80" alt="Incubators" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-grow flex flex-col justify-center">
-                                            <div class="flex items-center justify-between">
-                                                <h4 class="text-xs font-bold text-navy-900 group-hover/sub:text-medical-600 transition-colors">Lab Incubators</h4>
-                                                <span class="text-[9px] bg-slate-100 text-slate-600 font-semibold px-1.5 py-0.5 rounded">Digital PID</span>
-                                            </div>
-                                            <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Microprocessor thermal control for bacterial culturing.</p>
+                                            <h4 class="text-xs font-bold text-navy-950 group-hover/sub:text-medical-600 transition-colors">Lab Incubators</h4>
+                                            <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Microprocessor PID control for bacterial culturing.</p>
                                         </div>
                                     </div>
 
-                                    <!-- Sub-Card 4 -->
                                     <div class="sub-card-item sub-card-4 bg-white rounded-2xl p-3.5 border border-slate-200 hover:border-medical-500 hover:shadow-md flex gap-3.5 group/sub transition-all">
                                         <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-slate-100 bg-slate-100">
-                                            <img src="https://images.unsplash.com/photo-1581093588701-20f7813a8309?auto=format&fit=crop&w=300&q=80" alt="Water Baths" class="w-full h-full object-cover group-hover/sub:scale-105 transition-transform duration-500">
+                                            <img src="https://images.unsplash.com/photo-1581093588701-20f7813a8309?auto=format&fit=crop&w=300&q=80" alt="Water Baths" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-grow flex flex-col justify-center">
-                                            <div class="flex items-center justify-between">
-                                                <h4 class="text-xs font-bold text-navy-900 group-hover/sub:text-medical-600 transition-colors">Water Baths</h4>
-                                                <span class="text-[9px] bg-slate-100 text-slate-600 font-semibold px-1.5 py-0.5 rounded">Constant Temp</span>
-                                            </div>
-                                            <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Stainless steel incubation for sensitive reagent heating.</p>
+                                            <h4 class="text-xs font-bold text-navy-950 group-hover/sub:text-medical-600 transition-colors">Water Baths</h4>
+                                            <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Constant temperature stainless steel incubation.</p>
                                         </div>
                                     </div>
-
                                 </div>
 
-                                <a href="https://wa.me/9779841914333?text=I%20want%20specifications%20for%20Lab%20Equipment" target="_blank" class="w-full mt-2 bg-navy-900 hover:bg-medical-700 text-white text-xs font-bold py-3 rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2">
-                                    <i class="fa-solid fa-file-signature"></i> Request Technical Specifications & Quote
+                                <a href="https://wa.me/9779841914333?text=I%20want%20specifications%20for%20Lab%20Equipment" target="_blank" class="w-full mt-2 bg-navy-950 hover:bg-medical-700 text-white text-xs font-bold py-3 rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-file-signature text-medical-400"></i> Request Technical Specifications & Quote
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- MAIN PLAYCARD 2: Rapid Tests -->
+                <!-- PLAYCARD 2: Rapid Diagnostic Kits -->
                 <div id="parent-card-2" class="main-playcard bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden hover:border-medical-400">
-                    
                     <div onclick="togglePlaycard('drawer-rapid', 'parent-card-2')" class="cursor-pointer relative group">
-                        <div class="h-60 w-full relative overflow-hidden bg-navy-900">
-                            <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=1000&q=80" alt="Rapid Diagnostic Kits" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90">
+                        <div class="h-60 w-full relative overflow-hidden bg-navy-950">
+                            <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=1000&q=80" alt="Rapid Diagnostic Kits" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-85">
                             <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent"></div>
                             
-                            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-navy-900 text-[11px] font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
+                            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-navy-950 text-[11px] font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
                                 <i class="fa-solid fa-vial-circle-check text-medical-600"></i> Category 02
                             </div>
 
                             <div class="absolute bottom-5 left-6 right-6 flex items-end justify-between gap-4">
                                 <div class="space-y-1">
-                                    <h2 class="text-2xl font-extrabold text-white group-hover:text-medical-300 transition-colors flex items-center gap-2">
+                                    <h2 class="text-2xl font-extrabold text-white group-hover:text-medical-300 transition-colors">
                                         Rapid Diagnostic Kits
                                     </h2>
-                                    <p class="text-xs text-slate-300 font-medium leading-relaxed">Serology test strips, infectious disease screening & biochemistry reagents.</p>
+                                    <p class="text-xs text-slate-300 font-medium leading-relaxed">Serology test strips, infectious disease screening & reagents.</p>
                                 </div>
                                 <div class="w-11 h-11 rounded-2xl bg-white/20 backdrop-blur-md text-white flex items-center justify-center chevron-toggle shrink-0 shadow-lg border border-white/30">
                                     <i class="fa-solid fa-chevron-down text-sm"></i>
@@ -324,10 +299,10 @@
 
                         <div class="bg-slate-50 border-t border-slate-200/80 px-6 py-3.5 flex items-center justify-between text-xs font-bold text-slate-700">
                             <span class="flex items-center gap-2 text-medical-700">
-                                <i class="fa-solid fa-layer-group text-medical-600"></i> 4 Sub-Categories Available
+                                <i class="fa-solid fa-layer-group text-medical-600"></i> 4 Sub-Categories
                             </span>
                             <span class="text-slate-500 group-hover:text-medical-600 transition-colors flex items-center gap-1.5">
-                                Click to View Products <i class="fa-solid fa-arrow-down-long text-[10px]"></i>
+                                Expand Details <i class="fa-solid fa-arrow-down-long text-[10px]"></i>
                             </span>
                         </div>
                     </div>
@@ -336,91 +311,77 @@
                         <div class="overflow-hidden">
                             <div class="p-6 bg-slate-50/70 border-t border-slate-200/80 space-y-4">
                                 <div class="flex items-center justify-between border-b border-slate-200 pb-3">
-                                    <h3 class="text-xs font-extrabold text-navy-900 uppercase tracking-wider flex items-center gap-2">
+                                    <h3 class="text-xs font-extrabold text-navy-950 uppercase tracking-wider flex items-center gap-2">
                                         <i class="fa-solid fa-vial text-medical-600"></i> Reagents & Cassettes
                                     </h3>
                                     <span class="text-[10px] bg-medical-100 text-medical-800 font-bold px-2 py-0.5 rounded">High Sensitivity</span>
                                 </div>
                                 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    
                                     <div class="sub-card-item sub-card-1 bg-white rounded-2xl p-3.5 border border-slate-200 hover:border-medical-500 hover:shadow-md flex gap-3.5 group/sub transition-all">
                                         <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-slate-100 bg-slate-100">
-                                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=300&q=80" alt="Dengue Kit" class="w-full h-full object-cover group-hover/sub:scale-105 transition-transform duration-500">
+                                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=300&q=80" alt="Dengue Kit" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-grow flex flex-col justify-center">
-                                            <div class="flex items-center justify-between">
-                                                <h4 class="text-xs font-bold text-navy-900 group-hover/sub:text-medical-600 transition-colors">Dengue NS1 / IgG</h4>
-                                                <span class="text-[9px] bg-slate-100 text-slate-600 font-semibold px-1.5 py-0.5 rounded">99% Acc.</span>
-                                            </div>
+                                            <h4 class="text-xs font-bold text-navy-950 group-hover/sub:text-medical-600 transition-colors">Dengue NS1 / IgG</h4>
                                             <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Lateral flow chromatographic test for rapid screening.</p>
                                         </div>
                                     </div>
 
                                     <div class="sub-card-item sub-card-2 bg-white rounded-2xl p-3.5 border border-slate-200 hover:border-medical-500 hover:shadow-md flex gap-3.5 group/sub transition-all">
                                         <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-slate-100 bg-slate-100">
-                                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=300&q=80" alt="Typhoid Kit" class="w-full h-full object-cover group-hover/sub:scale-105 transition-transform duration-500">
+                                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=300&q=80" alt="Typhoid Kit" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-grow flex flex-col justify-center">
-                                            <div class="flex items-center justify-between">
-                                                <h4 class="text-xs font-bold text-navy-900 group-hover/sub:text-medical-600 transition-colors">Typhoid Diagnostic</h4>
-                                                <span class="text-[9px] bg-slate-100 text-slate-600 font-semibold px-1.5 py-0.5 rounded">IgM/IgG</span>
-                                            </div>
-                                            <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Rapid antibody determination kits for typhoid fever.</p>
+                                            <h4 class="text-xs font-bold text-navy-950 group-hover/sub:text-medical-600 transition-colors">Typhoid Diagnostic</h4>
+                                            <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Rapid antibody determination cassettes for typhoid.</p>
                                         </div>
                                     </div>
 
                                     <div class="sub-card-item sub-card-3 bg-white rounded-2xl p-3.5 border border-slate-200 hover:border-medical-500 hover:shadow-md flex gap-3.5 group/sub transition-all">
                                         <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-slate-100 bg-slate-100">
-                                            <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=300&q=80" alt="Infectious Screen" class="w-full h-full object-cover group-hover/sub:scale-105 transition-transform duration-500">
+                                            <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=300&q=80" alt="Infectious Screen" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-grow flex flex-col justify-center">
-                                            <div class="flex items-center justify-between">
-                                                <h4 class="text-xs font-bold text-navy-900 group-hover/sub:text-medical-600 transition-colors">Infectious Screen</h4>
-                                                <span class="text-[9px] bg-slate-100 text-slate-600 font-semibold px-1.5 py-0.5 rounded">Blood Bank</span>
-                                            </div>
-                                            <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Standardized screening cassettes for HBsAg, HCV, and HIV.</p>
+                                            <h4 class="text-xs font-bold text-navy-950 group-hover/sub:text-medical-600 transition-colors">Infectious Screen</h4>
+                                            <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Standardized screening kits for HBsAg, HCV & HIV.</p>
                                         </div>
                                     </div>
 
                                     <div class="sub-card-item sub-card-4 bg-white rounded-2xl p-3.5 border border-slate-200 hover:border-medical-500 hover:shadow-md flex gap-3.5 group/sub transition-all">
                                         <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-slate-100 bg-slate-100">
-                                            <img src="https://images.unsplash.com/photo-1579684385127-1ecd15d5621d?auto=format&fit=crop&w=300&q=80" alt="Biochemistry Reagents" class="w-full h-full object-cover group-hover/sub:scale-105 transition-transform duration-500">
+                                            <img src="https://images.unsplash.com/photo-1579684385127-1ecd15d5621d?auto=format&fit=crop&w=300&q=80" alt="Biochemistry Reagents" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-grow flex flex-col justify-center">
-                                            <div class="flex items-center justify-between">
-                                                <h4 class="text-xs font-bold text-navy-900 group-hover/sub:text-medical-600 transition-colors">Biochemistry Liquid</h4>
-                                                <span class="text-[9px] bg-slate-100 text-slate-600 font-semibold px-1.5 py-0.5 rounded">Stable Liquid</span>
-                                            </div>
-                                            <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Enzymatic liquid reagents for automated clinical analyzers.</p>
+                                            <h4 class="text-xs font-bold text-navy-950 group-hover/sub:text-medical-600 transition-colors">Biochemistry Liquids</h4>
+                                            <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Enzymatic liquid reagents for clinical analyzers.</p>
                                         </div>
                                     </div>
-
                                 </div>
 
-                                <a href="https://wa.me/9779841914333?text=I%20want%20bulk%20rates%20for%20Rapid%20Diagnostic%20Kits" target="_blank" class="w-full mt-2 bg-navy-900 hover:bg-medical-700 text-white text-xs font-bold py-3 rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2">
-                                    <i class="fa-solid fa-boxes-packing"></i> Request Bulk Supply Pricing
+                                <a href="https://wa.me/9779841914333?text=I%20want%20bulk%20rates%20for%20Rapid%20Diagnostic%20Kits" target="_blank" class="w-full mt-2 bg-navy-950 hover:bg-medical-700 text-white text-xs font-bold py-3 rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-boxes-packing text-medical-400"></i> Request Bulk Supply Pricing
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- MAIN PLAYCARD 3: Surgical Instruments -->
+                <!-- PLAYCARD 3: Surgical Instruments -->
                 <div id="parent-card-3" class="main-playcard bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden hover:border-medical-400">
                     <div onclick="togglePlaycard('drawer-surgical', 'parent-card-3')" class="cursor-pointer relative group">
-                        <div class="h-60 w-full relative overflow-hidden bg-navy-900">
-                            <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1000&q=80" alt="Surgical Instruments" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90">
+                        <div class="h-60 w-full relative overflow-hidden bg-navy-950">
+                            <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1000&q=80" alt="Surgical Instruments" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-85">
                             <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent"></div>
                             
-                            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-navy-900 text-[11px] font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
+                            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-navy-950 text-[11px] font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
                                 <i class="fa-solid fa-scissors text-medical-600"></i> Category 03
                             </div>
 
                             <div class="absolute bottom-5 left-6 right-6 flex items-end justify-between gap-4">
                                 <div class="space-y-1">
                                     <h2 class="text-2xl font-extrabold text-white group-hover:text-medical-300 transition-colors">Surgical Instruments</h2>
-                                    <p class="text-xs text-slate-300 font-medium leading-relaxed">Autoclavable OT sets, precision forceps, scalpels & sterile sutures.</p>
+                                    <p class="text-xs text-slate-300 font-medium leading-relaxed">Autoclavable OT sets, precision forceps & scalpels.</p>
                                 </div>
                                 <div class="w-11 h-11 rounded-2xl bg-white/20 backdrop-blur-md text-white flex items-center justify-center chevron-toggle shrink-0 shadow-lg border border-white/30">
                                     <i class="fa-solid fa-chevron-down text-sm"></i>
@@ -430,10 +391,10 @@
 
                         <div class="bg-slate-50 border-t border-slate-200/80 px-6 py-3.5 flex items-center justify-between text-xs font-bold text-slate-700">
                             <span class="flex items-center gap-2 text-medical-700">
-                                <i class="fa-solid fa-layer-group text-medical-600"></i> 4 Sub-Categories Available
+                                <i class="fa-solid fa-layer-group text-medical-600"></i> 4 Sub-Categories
                             </span>
                             <span class="text-slate-500 group-hover:text-medical-600 transition-colors flex items-center gap-1.5">
-                                Click to View Products <i class="fa-solid fa-arrow-down-long text-[10px]"></i>
+                                Expand Details <i class="fa-solid fa-arrow-down-long text-[10px]"></i>
                             </span>
                         </div>
                     </div>
@@ -442,7 +403,7 @@
                         <div class="overflow-hidden">
                             <div class="p-6 bg-slate-50/70 border-t border-slate-200/80 space-y-4">
                                 <div class="flex items-center justify-between border-b border-slate-200 pb-3">
-                                    <h3 class="text-xs font-extrabold text-navy-900 uppercase tracking-wider flex items-center gap-2">
+                                    <h3 class="text-xs font-extrabold text-navy-950 uppercase tracking-wider flex items-center gap-2">
                                         <i class="fa-solid fa-syringe text-medical-600"></i> Surgical OT Tools
                                     </h3>
                                     <span class="text-[10px] bg-medical-100 text-medical-800 font-bold px-2 py-0.5 rounded">Steel Grade 316</span>
@@ -453,7 +414,7 @@
                                             <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-grow flex flex-col justify-center">
-                                            <h4 class="text-xs font-bold text-navy-900 group-hover/sub:text-medical-600 transition-colors">General OT Tool Kits</h4>
+                                            <h4 class="text-xs font-bold text-navy-950 group-hover/sub:text-medical-600 transition-colors">General OT Kits</h4>
                                             <p class="text-[10px] text-slate-500 mt-1">Autoclavable stainless steel sets for operating rooms.</p>
                                         </div>
                                     </div>
@@ -462,7 +423,7 @@
                                             <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-grow flex flex-col justify-center">
-                                            <h4 class="text-xs font-bold text-navy-900 group-hover/sub:text-medical-600 transition-colors">Precision Forceps</h4>
+                                            <h4 class="text-xs font-bold text-navy-950 group-hover/sub:text-medical-600 transition-colors">Precision Forceps</h4>
                                             <p class="text-[10px] text-slate-500 mt-1">Hemostatic & tissue forceps engineered for stability.</p>
                                         </div>
                                     </div>
@@ -471,7 +432,7 @@
                                             <img src="https://images.unsplash.com/photo-1584467735816-1f914946654a?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-grow flex flex-col justify-center">
-                                            <h4 class="text-xs font-bold text-navy-900 group-hover/sub:text-medical-600 transition-colors">Scalpels & Blades</h4>
+                                            <h4 class="text-xs font-bold text-navy-950 group-hover/sub:text-medical-600 transition-colors">Scalpels & Blades</h4>
                                             <p class="text-[10px] text-slate-500 mt-1">High-grade carbon steel surgical cutting tools.</p>
                                         </div>
                                     </div>
@@ -480,7 +441,7 @@
                                             <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7a133?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-grow flex flex-col justify-center">
-                                            <h4 class="text-xs font-bold text-navy-900 group-hover/sub:text-medical-600 transition-colors">Sterile Sutures</h4>
+                                            <h4 class="text-xs font-bold text-navy-950 group-hover/sub:text-medical-600 transition-colors">Sterile Sutures</h4>
                                             <p class="text-[10px] text-slate-500 mt-1">Absorbable & non-absorbable surgical threads.</p>
                                         </div>
                                     </div>
@@ -490,14 +451,14 @@
                     </div>
                 </div>
 
-                <!-- MAIN PLAYCARD 4: Imaging & Radiology -->
+                <!-- PLAYCARD 4: Imaging & Radiology -->
                 <div id="parent-card-4" class="main-playcard bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden hover:border-medical-400">
                     <div onclick="togglePlaycard('drawer-imaging', 'parent-card-4')" class="cursor-pointer relative group">
-                        <div class="h-60 w-full relative overflow-hidden bg-navy-900">
-                            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1000&q=80" alt="Imaging & Radiology" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90">
+                        <div class="h-60 w-full relative overflow-hidden bg-navy-950">
+                            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1000&q=80" alt="Imaging & Radiology" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-85">
                             <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent"></div>
                             
-                            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-navy-900 text-[11px] font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
+                            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-navy-950 text-[11px] font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
                                 <i class="fa-solid fa-x-ray text-medical-600"></i> Category 04
                             </div>
 
@@ -514,10 +475,10 @@
 
                         <div class="bg-slate-50 border-t border-slate-200/80 px-6 py-3.5 flex items-center justify-between text-xs font-bold text-slate-700">
                             <span class="flex items-center gap-2 text-medical-700">
-                                <i class="fa-solid fa-layer-group text-medical-600"></i> 4 Sub-Categories Available
+                                <i class="fa-solid fa-layer-group text-medical-600"></i> 4 Sub-Categories
                             </span>
                             <span class="text-slate-500 group-hover:text-medical-600 transition-colors flex items-center gap-1.5">
-                                Click to View Products <i class="fa-solid fa-arrow-down-long text-[10px]"></i>
+                                Expand Details <i class="fa-solid fa-arrow-down-long text-[10px]"></i>
                             </span>
                         </div>
                     </div>
@@ -526,7 +487,7 @@
                         <div class="overflow-hidden">
                             <div class="p-6 bg-slate-50/70 border-t border-slate-200/80 space-y-4">
                                 <div class="flex items-center justify-between border-b border-slate-200 pb-3">
-                                    <h3 class="text-xs font-extrabold text-navy-900 uppercase tracking-wider flex items-center gap-2">
+                                    <h3 class="text-xs font-extrabold text-navy-950 uppercase tracking-wider flex items-center gap-2">
                                         <i class="fa-solid fa-wave-square text-medical-600"></i> Radiography & Imaging
                                     </h3>
                                     <span class="text-[10px] bg-medical-100 text-medical-800 font-bold px-2 py-0.5 rounded">Digital HD</span>
@@ -537,7 +498,7 @@
                                             <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-grow flex flex-col justify-center">
-                                            <h4 class="text-xs font-bold text-navy-900 group-hover/sub:text-medical-600 transition-colors">Wireless DR Flat Panels</h4>
+                                            <h4 class="text-xs font-bold text-navy-950 group-hover/sub:text-medical-600 transition-colors">DR Flat Panels</h4>
                                             <p class="text-[10px] text-slate-500 mt-1">High resolution digital x-ray detector panels.</p>
                                         </div>
                                     </div>
@@ -546,7 +507,7 @@
                                             <img src="https://images.unsplash.com/photo-1586773860418-d37222d8dfde?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-grow flex flex-col justify-center">
-                                            <h4 class="text-xs font-bold text-navy-900 group-hover/sub:text-medical-600 transition-colors">Mobile Surgical C-Arm</h4>
+                                            <h4 class="text-xs font-bold text-navy-950 group-hover/sub:text-medical-600 transition-colors">Mobile C-Arm</h4>
                                             <p class="text-[10px] text-slate-500 mt-1">Real-time fluoroscopy systems for surgical suites.</p>
                                         </div>
                                     </div>
@@ -555,7 +516,7 @@
                                             <img src="https://images.unsplash.com/photo-1512678080530-7760d81fbc6b?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-grow flex flex-col justify-center">
-                                            <h4 class="text-xs font-bold text-navy-900 group-hover/sub:text-medical-600 transition-colors">Laser Dry Films</h4>
+                                            <h4 class="text-xs font-bold text-navy-950 group-hover/sub:text-medical-600 transition-colors">Laser Dry Films</h4>
                                             <p class="text-[10px] text-slate-500 mt-1">High-density medical dry laser imaging films.</p>
                                         </div>
                                     </div>
@@ -564,7 +525,7 @@
                                             <img src="https://images.unsplash.com/photo-1559757175-5700efe28b75?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-grow flex flex-col justify-center">
-                                            <h4 class="text-xs font-bold text-navy-900 group-hover/sub:text-medical-600 transition-colors">Lead Protection Gear</h4>
+                                            <h4 class="text-xs font-bold text-navy-950 group-hover/sub:text-medical-600 transition-colors">Lead Protection Gear</h4>
                                             <p class="text-[10px] text-slate-500 mt-1">0.5mm Pb radiation shielding aprons & collars.</p>
                                         </div>
                                     </div>
@@ -578,7 +539,7 @@
         </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (Synced with index.html Navy Theme) -->
     <footer class="bg-navy-950 border-t border-navy-800 text-slate-400 py-10 text-center text-xs mt-auto">
         <div class="max-w-7xl mx-auto px-4 space-y-3">
             <div class="flex items-center justify-center gap-2.5 font-extrabold text-sm text-white">
@@ -592,24 +553,31 @@
         </div>
     </footer>
 
-    <!-- Interactive Script -->
+    <!-- Isolated Accordion Card Logic Script -->
     <script>
         function togglePlaycard(drawerId, parentId) {
-            const drawer = document.getElementById(drawerId);
-            const parentCard = document.getElementById(parentId);
+            const targetDrawer = document.getElementById(drawerId);
+            const targetParentCard = document.getElementById(parentId);
             
-            const isOpen = drawer.classList.contains('is-open');
+            // Check if the clicked card is already open
+            const isCurrentlyOpen = targetDrawer.classList.contains('is-open');
 
-            if (isOpen) {
+            // 1. Close ALL drawers and deactivate ALL cards first
+            document.querySelectorAll('.card-expand-drawer').forEach(drawer => {
                 drawer.classList.remove('is-open');
-                parentCard.classList.remove('is-active');
-            } else {
-                drawer.classList.add('is-open');
-                parentCard.classList.add('is-active');
+            });
+            document.querySelectorAll('.main-playcard').forEach(card => {
+                card.classList.remove('is-active');
+            });
+
+            // 2. If the clicked card was NOT open, expand only this target card
+            if (!isCurrentlyOpen) {
+                targetDrawer.classList.add('is-open');
+                targetParentCard.classList.add('is-active');
             }
         }
 
-        // Initialize First Main Card as Open on Page Load
+        // Initialize First Card Open on Load
         document.addEventListener("DOMContentLoaded", () => {
             togglePlaycard('drawer-lab', 'parent-card-1');
         });

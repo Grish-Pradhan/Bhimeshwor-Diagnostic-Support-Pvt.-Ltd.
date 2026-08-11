@@ -1,4 +1,72 @@
-/* Import Google Fonts: Plus Jakarta Sans */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+:root {
+  /* Green theme palette matching index.html */
+  --primary-green: #00a86b;
+  --primary-green-dark: #008757;
+  --primary-green-light: #e6f7f0;
+  --text-dark: #1f2937;
+  --border-light: #e5e7eb;
+}
 
-/* Add any custom standard CSS classes below this line if needed */
+/* Header & Footer Color Uniformity */
+header, footer {
+  background-color: #ffffff;
+  color: var(--text-dark);
+  border-color: var(--border-light);
+}
+
+header a:hover,
+footer a:hover,
+.nav-link.active {
+  color: var(--primary-green) !important;
+}
+
+/* Card Styling & Active Expansion Border */
+.category-card {
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.category-card.expanded {
+  border: 2px solid var(--primary-green);
+}
+
+/* Category Badges & Text */
+.category-badge {
+  background-color: #ffffff;
+  color: var(--primary-green);
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.sub-category-count {
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+/* Quote Button & Expand Toggle */
+.btn-request-quote {
+  background-color: var(--primary-green);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  width: 100%;
+  font-weight: 600;
+}
+
+.btn-request-quote:hover {
+  background-color: var(--primary-green-dark);
+}
+
+.expand-toggle {
+  background-color: var(--primary-green);
+  color: #ffffff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

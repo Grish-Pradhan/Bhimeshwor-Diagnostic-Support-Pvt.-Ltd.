@@ -32,6 +32,14 @@ footer a:hover,
   border: 2px solid var(--primary-green);
 }
 
+.category-card .card-details {
+  display: none; /* Hidden by default */
+}
+
+.category-card.expanded .card-details {
+  display: block; /* Shown when expanded */
+}
+
 /* Category Badges & Text */
 .category-badge {
   background-color: #ffffff;
@@ -54,6 +62,7 @@ footer a:hover,
   padding: 12px 20px;
   width: 100%;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .btn-request-quote:hover {
@@ -63,10 +72,12 @@ footer a:hover,
 .expand-toggle {
   background-color: var(--primary-green);
   color: #ffffff;
+  border: none;
   border-radius: 50%;
   width: 36px;
   height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }

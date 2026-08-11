@@ -1,260 +1,552 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Medical & Lab Product Categories</title>
-  <!-- Google Fonts & Font Awesome Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhimeshwori Diagnostic Support Pvt. Ltd.</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration (External JS) -->
+    <script src="tailwind-config.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-emerald-100 selection:text-emerald-900">
 
-  <!-- HEADER / NAVBAR -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="#" class="logo">
-        <i class="fa-solid fa-microscope logo-icon"></i>
-        <span>BioMed</span>Supply
-      </a>
-      <nav class="nav-links">
-        <a href="#" class="nav-link">Home</a>
-        <a href="#" class="nav-link active">Categories</a>
-        <a href="#" class="nav-link">Products</a>
-        <a href="#" class="nav-link">About Us</a>
-        <a href="#" class="nav-link">Contact</a>
-      </nav>
-      <div class="nav-actions">
-        <a href="#" class="btn-primary-outline">Get Quote</a>
-      </div>
+    <!-- Top Info Bar -->
+    <div class="bg-[#0f291e] text-emerald-100/90 text-xs py-2.5 border-b border-emerald-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
+            <div class="flex items-center gap-6">
+                <span><i class="fa-solid fa-location-dot text-emerald-400 mr-2"></i>Kupondole-1, Lalitpur, Nepal</span>
+                <span class="hidden sm:inline"><i class="fa-solid fa-user-tie text-emerald-400 mr-2"></i>Jitendra Das Kayastha</span>
+            </div>
+            <div class="flex items-center gap-6 font-medium">
+                <a href="tel:015900069" class="hover:text-emerald-300 transition-colors"><i class="fa-solid fa-phone text-emerald-400 mr-2"></i>01-5900069</a>
+                <a href="mailto:bhimeshwor2010@gmail.com" class="hover:text-emerald-300 transition-colors"><i class="fa-solid fa-envelope text-emerald-400 mr-2"></i>bhimeshwor2010@gmail.com</a>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <!-- MAIN CONTENT AREA -->
-  <main class="main-content">
-    <div class="container">
-      
-      <div class="page-title-section">
-        <h1>Medical Equipment & Diagnostics</h1>
-        <p>Explore our categorized medical supplies, diagnostic kits, and laboratory instruments.</p>
-      </div>
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="flex items-center gap-2">
+                    <img src="images/logo.png" alt="Bhimeshwori Diagnostic Support Pvt. Ltd. logo" class="w-10 h-10 object-contain rounded-xl shadow-sm border border-slate-200 bg-white" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                    <div class="hidden relative w-10 h-10 flex items-center justify-center bg-gradient-to-tr from-green-600 via-teal-600 to-amber-500 rounded-xl shadow-sm text-white font-black text-lg">
+                        <i class="fa-solid fa-handshake-angle text-white"></i>
+                    </div>
+                </div>
+                <div>
+                    <span class="font-extrabold text-sm sm:text-base text-slate-900 block leading-tight tracking-tight">BHIMESHWORI</span>
+                    <span class="text-[9px] font-bold text-teal-700 tracking-wider uppercase block">Diagnostic Support Pvt. Ltd.</span>
+                </div>
+            </a>
 
-      <!-- CATEGORY CARDS GRID -->
-      <div class="category-grid">
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-600">
+                <a href="#about" class="hover:text-emerald-700 transition-colors">About</a>
+                <a href="#categories" class="hover:text-emerald-700 transition-colors">Products</a>
+                <a href="#strengths" class="hover:text-emerald-700 transition-colors">Quality Assurance</a>
+                <a href="#location" class="hover:text-emerald-700 transition-colors">Location</a>
+                <a href="#contact" class="hover:text-emerald-700 transition-colors">Contact</a>
+            </nav>
 
-        <!-- CARD 1: ADVANCED LAB EQUIPMENT -->
-        <div class="category-card" id="card-cat-01">
-          <!-- Card Header Banner -->
-          <div class="card-banner" style="background-image: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.85) 100%), url('https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80');">
-            <div class="banner-top">
-              <span class="category-badge">
-                <i class="fa-solid fa-microscope"></i> CATEGORY 01
-              </span>
+            <div class="flex items-center gap-3">
+                <button onclick="openModal()" class="hidden sm:inline-flex bg-[#0f291e] hover:bg-emerald-900 text-white font-semibold px-4 py-2.5 rounded-xl text-xs transition-all shadow-sm">
+                    Request Quote
+                </button>
+                <a href="https://wa.me/9779841914333" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 py-2.5 rounded-xl text-xs transition-all shadow-sm flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span class="hidden sm:inline">WhatsApp</span>
+                </a>
+                <button onclick="toggleMobileMenu()" class="md:hidden text-slate-700 p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
             </div>
-            <div class="banner-bottom">
-              <div class="banner-text">
-                <h2>Advanced Lab Equipment</h2>
-                <p>Centrifuges, optical microscopes, incubators & analyzers.</p>
-              </div>
-              <button class="expand-toggle-btn" aria-label="Toggle details">
-                <i class="fa-solid fa-chevron-down toggle-icon"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Card Sub-Bar -->
-          <div class="card-sub-bar">
-            <span class="sub-category-tag">
-              <i class="fa-solid fa-layer-group"></i> 4 Sub-Categories
-            </span>
-            <span class="expand-label">
-              <span class="label-text">Expand Details</span> <i class="fa-solid fa-arrow-down icon-arrow"></i>
-            </span>
-          </div>
-
-          <!-- Expandable Content Area -->
-          <div class="card-details">
-            <div class="details-inner">
-              <div class="section-heading">
-                <div class="heading-left">
-                  <i class="fa-solid fa-vial-circle-check heading-icon"></i>
-                  <h3>LABORATORY INSTRUMENTS</h3>
-                </div>
-                <span class="status-badge">ISO Certified</span>
-              </div>
-
-              <div class="items-grid">
-                <div class="item-card">
-                  <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=120&q=80" alt="Centrifuges" class="item-img">
-                  <div class="item-info">
-                    <h4>High-Speed Centrifuges</h4>
-                    <p>Digital refrigerated & benchtop centrifuges.</p>
-                  </div>
-                </div>
-
-                <div class="item-card">
-                  <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=120&q=80" alt="Microscopes" class="item-img">
-                  <div class="item-info">
-                    <h4>Optical Microscopes</h4>
-                    <p>Binocular & trinocular laboratory microscopes.</p>
-                  </div>
-                </div>
-
-                <div class="item-card">
-                  <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=120&q=80" alt="Incubators" class="item-img">
-                  <div class="item-info">
-                    <h4>Lab Incubators</h4>
-                    <p>Constant temperature & CO2 growth incubators.</p>
-                  </div>
-                </div>
-
-                <div class="item-card">
-                  <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=120&q=80" alt="Analyzers" class="item-img">
-                  <div class="item-info">
-                    <h4>Automated Analyzers</h4>
-                    <p>Clinical chemistry & hematology analyzers.</p>
-                  </div>
-                </div>
-              </div>
-
-              <button class="btn-request-quote">
-                <i class="fa-brands fa-whatsapp"></i> Request Bulk Supply Pricing & Quote
-              </button>
-            </div>
-          </div>
         </div>
 
-
-        <!-- CARD 2: RAPID DIAGNOSTIC KITS -->
-        <div class="category-card" id="card-cat-02">
-          <!-- Card Header Banner -->
-          <div class="card-banner" style="background-image: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.85) 100%), url('https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=800&q=80');">
-            <div class="banner-top">
-              <span class="category-badge">
-                <i class="fa-solid fa-vial"></i> CATEGORY 02
-              </span>
-            </div>
-            <div class="banner-bottom">
-              <div class="banner-text">
-                <h2>Rapid Diagnostic Kits</h2>
-                <p>Serology test strips, infectious disease screening & reagents.</p>
-              </div>
-              <button class="expand-toggle-btn" aria-label="Toggle details">
-                <i class="fa-solid fa-chevron-down toggle-icon"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Card Sub-Bar -->
-          <div class="card-sub-bar">
-            <span class="sub-category-tag">
-              <i class="fa-solid fa-layer-group"></i> 4 Sub-Categories
-            </span>
-            <span class="expand-label">
-              <span class="label-text">Expand Details</span> <i class="fa-solid fa-arrow-down icon-arrow"></i>
-            </span>
-          </div>
-
-          <!-- Expandable Content Area -->
-          <div class="card-details">
-            <div class="details-inner">
-              <div class="section-heading">
-                <div class="heading-left">
-                  <i class="fa-solid fa-flask-vial heading-icon"></i>
-                  <h3>REAGENTS & CASSETTES</h3>
-                </div>
-                <span class="status-badge">High Sensitivity</span>
-              </div>
-
-              <div class="items-grid">
-                <div class="item-card">
-                  <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=120&q=80" alt="Dengue Diagnostic" class="item-img">
-                  <div class="item-info">
-                    <h4>Dengue NS1 / IgG</h4>
-                    <p>Lateral flow test strips for rapid screening.</p>
-                  </div>
-                </div>
-
-                <div class="item-card">
-                  <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=120&q=80" alt="Typhoid Diagnostic" class="item-img">
-                  <div class="item-info">
-                    <h4>Typhoid Diagnostic</h4>
-                    <p>Rapid antibody determination cassettes.</p>
-                  </div>
-                </div>
-
-                <div class="item-card">
-                  <img src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=120&q=80" alt="Infectious Screen" class="item-img">
-                  <div class="item-info">
-                    <h4>Infectious Screen</h4>
-                    <p>Standardized screening kits for HBsAg, HCV & HIV.</p>
-                  </div>
-                </div>
-
-                <div class="item-card">
-                  <img src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&w=120&q=80" alt="Biochemistry Liquids" class="item-img">
-                  <div class="item-info">
-                    <h4>Biochemistry Liquids</h4>
-                    <p>Enzymatic liquid reagents for analyzers.</p>
-                  </div>
-                </div>
-              </div>
-
-              <button class="btn-request-quote">
-                <i class="fa-brands fa-whatsapp"></i> Request Bulk Supply Pricing & Quote
-              </button>
-            </div>
-          </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-3">
+            <a href="#about" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-700 hover:text-emerald-700">About</a>
+            <a href="#categories" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-700 hover:text-emerald-700">Products</a>
+            <a href="#strengths" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-700 hover:text-emerald-700">Quality Assurance</a>
+            <a href="#location" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-700 hover:text-emerald-700">Location</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-700 hover:text-emerald-700">Contact</a>
+            <button onclick="openModal(); toggleMobileMenu();" class="w-full bg-[#0f291e] text-white text-xs font-semibold py-2.5 rounded-xl">Request Quote</button>
         </div>
+    </header>
 
-      </div>
+    <main>
+        <!-- Hero Section -->
+        <section id="about" class="relative bg-gradient-to-br from-[#0f291e] via-[#133526] to-[#0a1c14] text-white py-16 lg:py-24 overflow-hidden border-b border-emerald-900/50">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#34d399_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-900/60 border border-emerald-700/50 text-emerald-300 text-xs font-bold tracking-wide uppercase shadow-inner">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Certified Medical & Laboratory Partner
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                        Precision Diagnostics & <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">Advanced Medical Support</span>
+                    </h1>
 
+                    <p class="text-emerald-100/80 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+                        Trusted suppliers of high-performance laboratory instruments, rapid test kits, specialized reagents, surgical apparatus, and critical care solutions across Nepal.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#categories" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3.5 rounded-xl text-xs transition-all shadow-md hover:shadow-emerald-900/50 flex items-center gap-2">
+                            Explore Catalog <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                        <button onclick="openModal()" class="bg-emerald-950/80 border border-emerald-700/60 hover:bg-emerald-900 text-emerald-100 font-semibold px-6 py-3.5 rounded-xl text-xs transition-all flex items-center gap-2.5 shadow-sm">
+                            <i class="fa-solid fa-file-invoice text-emerald-400"></i> Get Official Quote
+                        </button>
+                    </div>
+
+                    <div class="p-4 bg-emerald-950/60 backdrop-blur-md rounded-2xl border border-emerald-800/60 flex items-center justify-between gap-4 max-w-md shadow-sm">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-800/40 text-emerald-300 border border-emerald-700/40 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-user-check"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold text-emerald-400/80 uppercase tracking-wider">Authorized Representative</p>
+                                <p class="text-xs font-bold text-white">Jitendra Das Kayastha</p>
+                            </div>
+                        </div>
+                        <a href="tel:9841914333" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors whitespace-nowrap">
+                            +977 9841914333 <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="rounded-3xl p-3 bg-gradient-to-br from-emerald-900/40 to-teal-900/20 border border-emerald-700/30 shadow-2xl backdrop-blur-sm relative group">
+                        <img src="images/image1-lab.avif" alt="Advanced Diagnostic Equipment" class="w-full h-80 object-cover rounded-2xl shadow-inner group-hover:scale-[1.01] transition-transform duration-500">
+                        <div class="absolute bottom-6 left-6 right-6 bg-slate-900/90 backdrop-blur-md p-3.5 rounded-xl border border-slate-700 flex items-center justify-between text-xs text-white">
+                            <span class="font-semibold"><i class="fa-solid fa-shield-halved text-emerald-400 mr-2"></i> ISO & CE Certified Supply Chain</span>
+                            <span class="text-emerald-400 font-bold">100% Assured</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metric Highlight Bar -->
+        <section class="bg-emerald-900 text-white py-8 border-b border-emerald-800 shadow-inner">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div class="p-2">
+                    <p class="text-2xl lg:text-3xl font-extrabold text-emerald-300">15+</p>
+                    <p class="text-[11px] uppercase font-semibold text-emerald-100/80 tracking-wider mt-1">Years of Excellence</p>
+                </div>
+                <div class="p-2">
+                    <p class="text-2xl lg:text-3xl font-extrabold text-emerald-300">500+</p>
+                    <p class="text-[11px] uppercase font-semibold text-emerald-100/80 tracking-wider mt-1">Hospitals & Laboratories</p>
+                </div>
+                <div class="p-2">
+                    <p class="text-2xl lg:text-3xl font-extrabold text-emerald-300">100%</p>
+                    <p class="text-[11px] uppercase font-semibold text-emerald-100/80 tracking-wider mt-1">Cold-Chain Integrity</p>
+                </div>
+                <div class="p-2">
+                    <p class="text-2xl lg:text-3xl font-extrabold text-emerald-300">24/7</p>
+                    <p class="text-[11px] uppercase font-semibold text-emerald-100/80 tracking-wider mt-1">On-Site Calibration Support</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Categories Section -->
+        <section id="categories" class="py-20 bg-slate-50 border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-2xl mx-auto space-y-3">
+                    <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-100/80 px-3.5 py-1.5 rounded-full border border-emerald-200 shadow-xs">Catalog Categories</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Diagnostic & Laboratory Supplies</h2>
+                    <p class="text-sm text-slate-600">Select a category below to explore specialized medical instruments, diagnostic kits, and reagents.</p>
+                </div>
+
+                <!-- Category Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+
+                    <!-- Category Card 01 -->
+                    <div class="category-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs transition-all duration-300">
+                        <!-- Banner Header -->
+                        <div class="relative h-48 bg-slate-900 p-5 flex flex-col justify-between bg-cover bg-center" style="background-image: linear-gradient(180deg, rgba(15, 23, 42, 0.3) 0%, rgba(15, 23, 42, 0.85) 100%), url('images/image1-lab.avif');">
+                            <span class="self-start bg-white text-emerald-800 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
+                                <i class="fa-solid fa-microscope text-emerald-600"></i> Category 01
+                            </span>
+                            <div class="flex items-end justify-between gap-4">
+                                <div>
+                                    <h3 class="text-lg font-bold text-white tracking-tight">Advanced Lab Equipment</h3>
+                                    <p class="text-xs text-slate-300 mt-0.5">Centrifuges, optical microscopes, incubators & analyzers.</p>
+                                </div>
+                                <button class="toggle-card-btn w-9 h-9 rounded-full bg-white/20 text-white hover:bg-emerald-600 flex items-center justify-center shrink-0 transition-colors" aria-label="Toggle details">
+                                    <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Expand Trigger Sub-Bar -->
+                        <div class="toggle-card-bar flex items-center justify-between px-5 py-3 border-b border-slate-100 cursor-pointer bg-white hover:bg-slate-50 transition-colors">
+                            <span class="text-xs font-bold text-emerald-700 flex items-center gap-2">
+                                <i class="fa-solid fa-layer-group"></i> 4 Sub-Categories
+                            </span>
+                            <span class="text-xs font-semibold text-slate-500">Expand Details &darr;</span>
+                        </div>
+
+                        <!-- Expandable Details -->
+                        <div class="card-details-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="p-5 space-y-4">
+                                <div class="flex items-center justify-between text-xs font-bold">
+                                    <span class="text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
+                                        <i class="fa-solid fa-vial-circle-check text-emerald-600"></i> Equipment & Instruments
+                                    </span>
+                                    <span class="bg-emerald-100 text-emerald-800 px-2.5 py-0.5 rounded-full text-[10px]">ISO Certified</span>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <div class="p-2.5 border border-slate-200 rounded-xl flex items-center gap-3 bg-slate-50/50">
+                                        <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-sm shrink-0">01</div>
+                                        <div>
+                                            <h4 class="text-xs font-bold text-slate-900">Digital Centrifuges</h4>
+                                            <p class="text-[11px] text-slate-500 leading-tight">High-speed benchtop models.</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-2.5 border border-slate-200 rounded-xl flex items-center gap-3 bg-slate-50/50">
+                                        <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-sm shrink-0">02</div>
+                                        <div>
+                                            <h4 class="text-xs font-bold text-slate-900">Optical Microscopes</h4>
+                                            <p class="text-[11px] text-slate-500 leading-tight">Binocular & trinocular units.</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-2.5 border border-slate-200 rounded-xl flex items-center gap-3 bg-slate-50/50">
+                                        <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-sm shrink-0">03</div>
+                                        <div>
+                                            <h4 class="text-xs font-bold text-slate-900">Lab Incubators</h4>
+                                            <p class="text-[11px] text-slate-500 leading-tight">Constant temperature units.</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-2.5 border border-slate-200 rounded-xl flex items-center gap-3 bg-slate-50/50">
+                                        <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-sm shrink-0">04</div>
+                                        <div>
+                                            <h4 class="text-xs font-bold text-slate-900">Clinical Analyzers</h4>
+                                            <p class="text-[11px] text-slate-500 leading-tight">Automated biochemistry units.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button onclick="openModal()" class="w-full bg-[#0f291e] hover:bg-emerald-900 text-white text-xs font-semibold py-3 rounded-xl transition-all shadow-xs flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-file-invoice text-emerald-400"></i> Request Bulk Supply Quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category Card 02 -->
+                    <div class="category-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs transition-all duration-300">
+                        <!-- Banner Header -->
+                        <div class="relative h-48 bg-slate-900 p-5 flex flex-col justify-between bg-cover bg-center" style="background-image: linear-gradient(180deg, rgba(15, 23, 42, 0.3) 0%, rgba(15, 23, 42, 0.85) 100%), url('images/image2-tools.avif');">
+                            <span class="self-start bg-white text-emerald-800 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
+                                <i class="fa-solid fa-vial text-emerald-600"></i> Category 02
+                            </span>
+                            <div class="flex items-end justify-between gap-4">
+                                <div>
+                                    <h3 class="text-lg font-bold text-white tracking-tight">Rapid Diagnostic Kits</h3>
+                                    <p class="text-xs text-slate-300 mt-0.5">Serology test strips, infectious disease screening & reagents.</p>
+                                </div>
+                                <button class="toggle-card-btn w-9 h-9 rounded-full bg-white/20 text-white hover:bg-emerald-600 flex items-center justify-center shrink-0 transition-colors" aria-label="Toggle details">
+                                    <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Expand Trigger Sub-Bar -->
+                        <div class="toggle-card-bar flex items-center justify-between px-5 py-3 border-b border-slate-100 cursor-pointer bg-white hover:bg-slate-50 transition-colors">
+                            <span class="text-xs font-bold text-emerald-700 flex items-center gap-2">
+                                <i class="fa-solid fa-layer-group"></i> 4 Sub-Categories
+                            </span>
+                            <span class="text-xs font-semibold text-slate-500">Expand Details &darr;</span>
+                        </div>
+
+                        <!-- Expandable Details -->
+                        <div class="card-details-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="p-5 space-y-4">
+                                <div class="flex items-center justify-between text-xs font-bold">
+                                    <span class="text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
+                                        <i class="fa-solid fa-vial text-emerald-600"></i> Reagents & Cassettes
+                                    </span>
+                                    <span class="bg-emerald-100 text-emerald-800 px-2.5 py-0.5 rounded-full text-[10px]">High Sensitivity</span>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <div class="p-2.5 border border-slate-200 rounded-xl flex items-center gap-3 bg-slate-50/50">
+                                        <div class="w-10 h-10 rounded-lg bg-teal-100 text-teal-800 flex items-center justify-center font-bold text-sm shrink-0">01</div>
+                                        <div>
+                                            <h4 class="text-xs font-bold text-slate-900">Dengue NS1 / IgG</h4>
+                                            <p class="text-[11px] text-slate-500 leading-tight">Lateral flow test strips.</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-2.5 border border-slate-200 rounded-xl flex items-center gap-3 bg-slate-50/50">
+                                        <div class="w-10 h-10 rounded-lg bg-teal-100 text-teal-800 flex items-center justify-center font-bold text-sm shrink-0">02</div>
+                                        <div>
+                                            <h4 class="text-xs font-bold text-slate-900">Typhoid Diagnostic</h4>
+                                            <p class="text-[11px] text-slate-500 leading-tight">Antibody detection cassettes.</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-2.5 border border-slate-200 rounded-xl flex items-center gap-3 bg-slate-50/50">
+                                        <div class="w-10 h-10 rounded-lg bg-teal-100 text-teal-800 flex items-center justify-center font-bold text-sm shrink-0">03</div>
+                                        <div>
+                                            <h4 class="text-xs font-bold text-slate-900">Infectious Screen</h4>
+                                            <p class="text-[11px] text-slate-500 leading-tight">Screening kits for HBsAg & HIV.</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-2.5 border border-slate-200 rounded-xl flex items-center gap-3 bg-slate-50/50">
+                                        <div class="w-10 h-10 rounded-lg bg-teal-100 text-teal-800 flex items-center justify-center font-bold text-sm shrink-0">04</div>
+                                        <div>
+                                            <h4 class="text-xs font-bold text-slate-900">Biochemistry Liquids</h4>
+                                            <p class="text-[11px] text-slate-500 leading-tight">Enzymatic liquid reagents.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button onclick="openModal()" class="w-full bg-[#0f291e] hover:bg-emerald-900 text-white text-xs font-semibold py-3 rounded-xl transition-all shadow-xs flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-file-invoice text-emerald-400"></i> Request Bulk Supply Quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Operational Strengths Infographic Section -->
+        <section id="strengths" class="py-20 bg-gradient-to-b from-white to-slate-50 border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-2xl mx-auto space-y-3">
+                    <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-100/80 px-3.5 py-1.5 rounded-full border border-emerald-200 shadow-xs">Our Core Operational Focus</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Excellence in Medical Logistics & Support</h2>
+                    <p class="text-sm text-slate-600">Engineered workflow designed specifically to fulfill stringent hospital and pathology requirements.</p>
+                </div>
+
+                <!-- Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                    
+                    <!-- Step 1: Quality Assured -->
+                    <div class="bg-white rounded-2xl border border-emerald-100 shadow-sm hover:shadow-xl hover:border-emerald-300 transition-all duration-300 relative flex flex-col group mt-4">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-9 h-9 rounded-xl bg-[#00a86b] text-white font-bold text-xs flex items-center justify-center shadow-md z-20">01</div>
+                        <div class="h-32 w-full rounded-t-2xl overflow-hidden relative">
+                            <img src="images/image2-tools.avif" alt="Quality Assured" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-emerald-900/10"></div>
+                        </div>
+                        <div class="px-6 pb-7 pt-0 flex flex-col items-center text-center relative z-10 flex-grow">
+                            <div class="w-14 h-14 bg-white text-[#00a86b] rounded-2xl flex items-center justify-center text-xl -mt-7 mb-4 group-hover:bg-[#00a86b] group-hover:text-white transition-all duration-300 border-4 border-white shadow-md relative">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <h3 class="font-bold text-base text-slate-900 mb-2">Quality Assured</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">Sourced directly from recognized manufacturers.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Cold-Chain Handling -->
+                    <div class="bg-white rounded-2xl border border-teal-100 shadow-sm hover:shadow-xl hover:border-teal-300 transition-all duration-300 relative flex flex-col group mt-4">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-9 h-9 rounded-xl bg-[#008b8b] text-white font-bold text-xs flex items-center justify-center shadow-md z-20">02</div>
+                        <div class="h-32 w-full rounded-t-2xl overflow-hidden relative">
+                            <img src="images/image3-work.avif" alt="Cold Chain Handling" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-teal-900/10"></div>
+                        </div>
+                        <div class="px-6 pb-7 pt-0 flex flex-col items-center text-center relative z-10 flex-grow">
+                            <div class="w-14 h-14 bg-white text-[#008b8b] rounded-2xl flex items-center justify-center text-xl -mt-7 mb-4 group-hover:bg-[#008b8b] group-hover:text-white transition-all duration-300 border-4 border-white shadow-md relative">
+                                <i class="fa-solid fa-snowflake"></i>
+                            </div>
+                            <h3 class="font-bold text-base text-slate-900 mb-2">Cold-Chain Handling</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">Regulated reagent delivery & cold storage control.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Maintenance Support -->
+                    <div class="bg-white rounded-2xl border border-blue-100 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 relative flex flex-col group mt-4">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-9 h-9 rounded-xl bg-[#2563eb] text-white font-bold text-xs flex items-center justify-center shadow-md z-20">03</div>
+                        <div class="h-32 w-full rounded-t-2xl overflow-hidden relative">
+                            <img src="images/image2-tools.avif" alt="Maintenance Support" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-blue-900/10"></div>
+                        </div>
+                        <div class="px-6 pb-7 pt-0 flex flex-col items-center text-center relative z-10 flex-grow">
+                            <div class="w-14 h-14 bg-white text-[#2563eb] rounded-2xl flex items-center justify-center text-xl -mt-7 mb-4 group-hover:bg-[#2563eb] group-hover:text-white transition-all duration-300 border-4 border-white shadow-md relative">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                            <h3 class="font-bold text-base text-slate-900 mb-2">Maintenance Support</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">On-site setup and technical calibration assistance.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Bulk Orders -->
+                    <div class="bg-white rounded-2xl border border-orange-100 shadow-sm hover:shadow-xl hover:border-orange-300 transition-all duration-300 relative flex flex-col group mt-4">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-9 h-9 rounded-xl bg-[#f97316] text-white font-bold text-xs flex items-center justify-center shadow-md z-20">04</div>
+                        <div class="h-32 w-full rounded-t-2xl overflow-hidden relative">
+                            <img src="images/bulkorder.webp" alt="Bulk Orders" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-orange-900/10"></div>
+                        </div>
+                        <div class="px-6 pb-7 pt-0 flex flex-col items-center text-center relative z-10 flex-grow">
+                            <div class="w-14 h-14 bg-white text-[#f97316] rounded-2xl flex items-center justify-center text-xl -mt-7 mb-4 group-hover:bg-[#f97316] group-hover:text-white transition-all duration-300 border-4 border-white shadow-md relative">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                            </div>
+                            <h3 class="font-bold text-base text-slate-900 mb-2">Bulk Orders</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">Custom supply solutions for hospitals & labs.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location" class="py-16 bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div>
+                        <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight">Our Location</h2>
+                        <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-location-dot text-emerald-600 mr-1.5"></i> Kupondole-1, Lalitpur, Nepal</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/Kupondole-1,+Lalitpur,+Nepal" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-800 transition-colors">
+                        Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+
+                <div class="w-full h-80 rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-sm">
+                    <iframe 
+                        title="Office Location Map" 
+                        src="https://maps.google.com/maps?q=Kupondole-1,+Lalitpur,+Nepal&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-6">
+                        <div>
+                            <h2 class="text-xs font-bold text-emerald-700 uppercase tracking-widest">Get In Touch</h2>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-1">Contact Our Team</p>
+                            <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">Reach out directly for institutional orders, official quotations, or technical calibration support for your facility.</p>
+                        </div>
+
+                        <div class="space-y-4 text-xs sm:text-sm font-medium">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-building"></i>
+                                </div>
+                                <span class="text-slate-900 font-semibold">Bhimeshwori Diagnostic Support Pvt. Ltd.</span>
+                            </div>
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </div>
+                                <span class="text-slate-700">Jitendra Das Kayastha</span>
+                            </div>
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <span class="text-slate-700">Kupondole-1, Lalitpur, Nepal</span>
+                            </div>
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <a href="tel:015900069" class="text-slate-700 hover:text-emerald-700 transition-colors">01-5900069 / +977 9841914333</a>
+                            </div>
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <a href="mailto:bhimeshwor2010@gmail.com" class="text-slate-700 hover:text-emerald-700 transition-colors">bhimeshwor2010@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Instant Contact Box -->
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 text-center space-y-5 shadow-sm">
+                        <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl mx-auto border border-emerald-100">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base">Direct Instant Messaging</h3>
+                            <p class="text-xs text-slate-500 mt-1">Connect with our team directly on WhatsApp for immediate pricing and availability responses.</p>
+                        </div>
+                        <a href="https://wa.me/9779841914333" target="_blank" class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 rounded-xl text-xs transition-all shadow-sm">
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Quotation Request Modal -->
+    <div id="quoteModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-xs z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 space-y-4 shadow-xl border border-slate-200 relative animate-in fade-in zoom-in duration-200">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div>
+                <h3 class="text-lg font-extrabold text-slate-900">Request Official Quotation</h3>
+                <p class="text-xs text-slate-500 mt-1">Fill out the details below to receive pricing and availability.</p>
+            </div>
+            <form id="quoteForm" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Product Category</label>
+                    <select id="modalCategory" class="w-full text-xs p-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Laboratory Equipment">Laboratory Equipment</option>
+                        <option value="Rapid Tests & Reagents">Rapid Tests & Reagents</option>
+                        <option value="Surgical Goods">Surgical Goods</option>
+                        <option value="X-Ray & Ventilators">X-Ray & ICU Imaging</option>
+                        <option value="Hospital Supplies">Hospital Supplies</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Organization / Hospital Name</label>
+                    <input type="text" id="modalOrg" required placeholder="e.g. Bir Hospital" class="w-full text-xs p-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Contact Phone</label>
+                    <input type="tel" id="modalPhone" required placeholder="01-XXXXXXX / 98XXXXXXXX" class="w-full text-xs p-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Quantity / Specific Requirements</label>
+                    <textarea id="modalDetails" rows="3" placeholder="Specify models or quantity required..." class="w-full text-xs p-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:outline-none"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-[#0f291e] hover:bg-emerald-900 text-white font-semibold py-2.5 rounded-xl text-xs transition-all shadow-sm">
+                    Submit Request via WhatsApp
+                </button>
+            </form>
+        </div>
     </div>
-  </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-container">
-      <div class="footer-col brand-col">
-        <a href="#" class="logo footer-logo">
-          <i class="fa-solid fa-microscope logo-icon"></i>
-          <span>BioMed</span>Supply
-        </a>
-        <p>Providing certified laboratory equipment and rapid diagnostics for medical facilities worldwide.</p>
-      </div>
+    <!-- Footer -->
+    <footer class="bg-[#0f291e] text-emerald-200/80 py-8 text-xs border-t border-emerald-900/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <p>&copy; Bhimeshwori Diagnostic Support Pvt. Ltd. All rights reserved.</p>
+            <p class="text-emerald-400">Kupondole-1, Lalitpur | 01-5900069 | 9841914333</p>
+        </div>
+    </footer>
 
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#">Diagnostic Kits</a></li>
-          <li><a href="#">Lab Automation</a></li>
-          <li><a href="#">Reagents & Cassettes</a></li>
-          <li><a href="#">ISO Certifications</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Support & Contact</h4>
-        <ul>
-          <li><a href="#"><i class="fa-solid fa-envelope"></i> sales@biomedsupply.com</a></li>
-          <li><a href="#"><i class="fa-solid fa-phone"></i> +1 (800) 555-0199</a></li>
-          <li><a href="#"><i class="fa-solid fa-location-dot"></i> Medical Hub, Building 4</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2026 BioMed Supply Inc. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Main JavaScript File -->
-  <script src="script.js"></script>
+    <!-- Custom JavaScript linked here -->
+    <script src="script.js"></script>
 </body>
 </html>
